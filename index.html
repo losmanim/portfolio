@@ -11,8 +11,9 @@
     <meta property="og:description" content="Sistemas de gestão, CRMs e ERPs completos, em produção, com testes automatizados.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://losmanim.github.io/portfolio/">
+    <meta property="og:image" content="https://losmanim.github.io/portfolio/assets/crm-dashboard.png">
     <meta name="theme-color" content="#0A2A66">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><defs><linearGradient id='bg' x1='0' y1='0' x2='48' y2='48' gradientUnits='userSpaceOnUse'><stop offset='0' stop-color='%230F3B8A'/><stop offset='1' stop-color='%230A2A66'/></linearGradient></defs><rect width='48' height='48' rx='12' fill='url(%23bg)'/><rect x='11' y='11' width='12' height='12' rx='3' fill='%23FFFFFF' fill-opacity='0.95'/><rect x='25' y='11' width='12' height='7' rx='3' fill='%23FFFFFF' fill-opacity='0.6'/><rect x='25' y='20' width='12' height='7' rx='3' fill='%23FFFFFF' fill-opacity='0.6'/><rect x='11' y='25' width='12' height='12' rx='3' fill='%23FBBF24'/><path d='M13.8 33.5 L16.6 30.2 L18.9 31.8 L22.2 27.3' stroke='%230A2A66' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' fill='none'/><circle cx='22.2' cy='27.3' r='1.4' fill='%230A2A66'/></svg>">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root { --primary:#0A2A66; --primary-light:#1E40AF; --accent:#3B82F6; --bg:#F8FAFC; --card:#FFFFFF; --text:#1E293B; --text-secondary:#64748B; --border:#E2E8F0; --success:#10B981; --warning:#F59E0B; }
@@ -22,7 +23,11 @@
 
         nav { position:fixed; top:0; left:0; right:0; background:rgba(255,255,255,0.95); backdrop-filter:blur(8px); border-bottom:1px solid var(--border); z-index:100; padding:0 2rem; }
         nav .container { display:flex; align-items:center; justify-content:space-between; height:56px; max-width:1100px; margin:0 auto; }
-        nav .logo { font-weight:800; color:var(--primary); text-decoration:none; font-size:1.1rem; }
+        nav .logo { display:flex; align-items:center; gap:0.6rem; font-weight:800; color:var(--primary); text-decoration:none; font-size:1.05rem; }
+        nav .logo svg { width:30px; height:30px; flex-shrink:0; }
+        .hero-logo { width:76px; height:76px; margin:0 auto 1.5rem; filter:drop-shadow(0 10px 28px rgba(0,0,0,0.35)); }
+        .hero-logo svg { width:100%; height:100%; }
+        .private-note { display:block; margin-top:0.75rem; color:var(--text-secondary); font-size:0.8rem; }
         nav .links { display:flex; gap:1.5rem; }
         nav .links a { text-decoration:none; color:var(--text-secondary); font-size:0.85rem; font-weight:500; transition:color 0.2s; }
         nav .links a:hover { color:var(--primary); }
@@ -89,6 +94,7 @@
             .hero h1 { font-size:2rem; }
             nav .links { gap:0.8rem; }
             nav .links a { font-size:0.75rem; }
+            nav .logo span { display:none; }
         }
     </style>
 </head>
@@ -96,7 +102,19 @@
 
 <nav>
     <div class="container">
-        <a href="#" class="logo">LA</a>
+        <a href="#" class="logo">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs><linearGradient id="lg-nav" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#0F3B8A"/><stop offset="1" stop-color="#0A2A66"/></linearGradient></defs>
+                <rect width="48" height="48" rx="12" fill="url(#lg-nav)"/>
+                <rect x="11" y="11" width="12" height="12" rx="3" fill="#FFFFFF" fill-opacity="0.95"/>
+                <rect x="25" y="11" width="12" height="7" rx="3" fill="#FFFFFF" fill-opacity="0.6"/>
+                <rect x="25" y="20" width="12" height="7" rx="3" fill="#FFFFFF" fill-opacity="0.6"/>
+                <rect x="11" y="25" width="12" height="12" rx="3" fill="#FBBF24"/>
+                <path d="M13.8 33.5 L16.6 30.2 L18.9 31.8 L22.2 27.3" stroke="#0A2A66" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <circle cx="22.2" cy="27.3" r="1.4" fill="#0A2A66"/>
+            </svg>
+            <span>Luiz Antonio</span>
+        </a>
         <div class="links">
             <a href="#projetos">Projetos</a>
             <a href="#skills">Competências</a>
@@ -108,9 +126,22 @@
 
 <div class="hero">
     <div class="container">
+        <div class="hero-logo">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs><linearGradient id="lg-hero" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#1E40AF"/><stop offset="1" stop-color="#0A2A66"/></linearGradient></defs>
+                <rect width="48" height="48" rx="12" fill="url(#lg-hero)" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+                <rect x="11" y="11" width="12" height="12" rx="3" fill="#FFFFFF" fill-opacity="0.95"/>
+                <rect x="25" y="11" width="12" height="7" rx="3" fill="#FFFFFF" fill-opacity="0.6"/>
+                <rect x="25" y="20" width="12" height="7" rx="3" fill="#FFFFFF" fill-opacity="0.6"/>
+                <rect x="11" y="25" width="12" height="12" rx="3" fill="#FBBF24"/>
+                <path d="M13.8 33.5 L16.6 30.2 L18.9 31.8 L22.2 27.3" stroke="#0A2A66" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <circle cx="22.2" cy="27.3" r="1.4" fill="#0A2A66"/>
+            </svg>
+        </div>
         <h1>Olá, sou o Luiz Antonio</h1>
         <p>Web Developer especializado em CRMs, sistemas de gestão e aplicações web full-stack</p>
         <div class="hero-tags">
+            <span>📍 Porto, Portugal</span>
             <span>PHP</span>
             <span>JavaScript</span>
             <span>MySQL</span>
@@ -159,7 +190,8 @@
                     <div class="stat"><div class="stat-value">22</div><div class="stat-label">Módulos</div></div>
                     <div class="stat"><div class="stat-value">50+</div><div class="stat-label">JS Files</div></div>
                 </div>
-                <a href="https://github.com/losmanim/crm-poupaplus" class="btn btn-primary">GitHub</a>
+                <a href="mailto:los486@hotmail.com?subject=Pedido%20de%20acesso%20ao%20codigo%20-%20PoupaPlus%20CRM" class="btn btn-primary">Pedir acesso ao código</a>
+                <span class="private-note">🔒 Repositório privado · acesso partilhado com clientes</span>
             </div>
 
             <div class="project-card">
@@ -181,7 +213,8 @@
                     <div class="stat"><div class="stat-value">16</div><div class="stat-label">Tabelas</div></div>
                     <div class="stat"><div class="stat-value">10</div><div class="stat-label">Módulos</div></div>
                 </div>
-                <a href="https://github.com/losmanim/gestaoBH" class="btn btn-primary">GitHub</a>
+                <a href="mailto:los486@hotmail.com?subject=Pedido%20de%20acesso%20ao%20codigo%20-%20Gestao%20BH%20ERP" class="btn btn-primary">Pedir acesso ao código</a>
+                <span class="private-note">🔒 Repositório privado · acesso partilhado com clientes</span>
             </div>
         </div>
     </section>

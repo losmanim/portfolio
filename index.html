@@ -3,40 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luiz Antonio · Web Developer · Porto</title>
-    <meta name="description" content="Portfólio de Luiz Antonio — Web Developer especializado em CRMs, ERPs e sistemas de gestão full-stack. PHP, JavaScript, MySQL, Appwrite.">
-    <meta name="keywords" content="web developer, porto, freelancer, php, javascript, mysql, crms, erps, sistemas de gestão">
+    <title>Luiz Antonio · Web Developer · CRMs, ERPs e Aplicações Web</title>
+    <meta name="description" content="Portfólio de Luiz Antonio — Web Developer full-stack em Porto, Portugal. CRMs, ERPs e sistemas de gestão em produção: PHP, JavaScript, Next.js, TypeScript, Supabase, MySQL, Appwrite.">
+    <meta name="keywords" content="web developer, porto, freelancer, php, javascript, typescript, next.js, supabase, mysql, crms, erps, sistemas de gestão, call center, faturação">
     <meta name="author" content="Luiz Antonio">
     <meta property="og:title" content="Luiz Antonio · Web Developer">
-    <meta property="og:description" content="Sistemas de gestão, CRMs e ERPs completos, em produção, com testes automatizados.">
+    <meta property="og:description" content="Sistemas de gestão, CRMs, ERPs e aplicações web em produção — PHP, Next.js, JavaScript, Supabase, com testes automatizados.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://losmanim.github.io/portfolio/">
     <meta property="og:image" content="https://losmanim.github.io/portfolio/assets/crm-dashboard.png">
     <meta name="theme-color" content="#0A2A66">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><defs><linearGradient id='bg' x1='0' y1='0' x2='48' y2='48' gradientUnits='userSpaceOnUse'><stop offset='0' stop-color='%230F3B8A'/><stop offset='1' stop-color='%230A2A66'/></linearGradient></defs><rect width='48' height='48' rx='12' fill='url(%23bg)'/><rect x='11' y='11' width='12' height='12' rx='3' fill='%23FFFFFF' fill-opacity='0.95'/><rect x='25' y='11' width='12' height='7' rx='3' fill='%23FFFFFF' fill-opacity='0.6'/><rect x='25' y='20' width='12' height='7' rx='3' fill='%23FFFFFF' fill-opacity='0.6'/><rect x='11' y='25' width='12' height='12' rx='3' fill='%23FBBF24'/><path d='M13.8 33.5 L16.6 30.2 L18.9 31.8 L22.2 27.3' stroke='%230A2A66' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' fill='none'/><circle cx='22.2' cy='27.3' r='1.4' fill='%230A2A66'/></svg>">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Luiz Antonio",
+        "jobTitle": "Web Developer & Freelancer",
+        "url": "https://losmanim.github.io/portfolio/",
+        "email": "mailto:los486@hotmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Porto",
+            "addressCountry": "PT"
+        },
+        "knowsAbout": ["PHP", "JavaScript", "TypeScript", "Next.js", "React", "MySQL", "Supabase", "Appwrite", "APIs REST", "PWAs", "Sistemas de gestão", "CRMs", "ERPs"],
+        "sameAs": [
+            "https://github.com/losmanim",
+            "https://www.linkedin.com/in/luiz-antonio-de-oliveira-silva-84945197"
+        ]
+    }
+    </script>
     <style>
         :root { --primary:#0A2A66; --primary-light:#1E40AF; --accent:#3B82F6; --bg:#F8FAFC; --card:#FFFFFF; --text:#1E293B; --text-secondary:#64748B; --border:#E2E8F0; --success:#10B981; --warning:#F59E0B; }
         * { margin:0; padding:0; box-sizing:border-box; }
-        html { scroll-behavior: smooth; }
+        html { scroll-behavior:smooth; }
         body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); line-height:1.6; }
 
         nav { position:fixed; top:0; left:0; right:0; background:rgba(255,255,255,0.95); backdrop-filter:blur(8px); border-bottom:1px solid var(--border); z-index:100; padding:0 2rem; }
         nav .container { display:flex; align-items:center; justify-content:space-between; height:56px; max-width:1100px; margin:0 auto; }
         nav .logo { display:flex; align-items:center; gap:0.6rem; font-weight:800; color:var(--primary); text-decoration:none; font-size:1.05rem; }
         nav .logo svg { width:30px; height:30px; flex-shrink:0; }
-        .hero-logo { width:76px; height:76px; margin:0 auto 1.5rem; filter:drop-shadow(0 10px 28px rgba(0,0,0,0.35)); }
-        .hero-logo svg { width:100%; height:100%; }
-        .private-note { display:block; margin-top:0.75rem; color:var(--text-secondary); font-size:0.8rem; }
         nav .links { display:flex; gap:1.5rem; }
         nav .links a { text-decoration:none; color:var(--text-secondary); font-size:0.85rem; font-weight:500; transition:color 0.2s; }
         nav .links a:hover { color:var(--primary); }
+        .nav-toggle { display:none; background:none; border:none; cursor:pointer; padding:0.4rem; }
+        .nav-toggle span { display:block; width:22px; height:2px; background:var(--primary); margin:5px 0; border-radius:2px; transition:0.3s; }
+
+        .hero-logo { width:76px; height:76px; margin:0 auto 1.5rem; filter:drop-shadow(0 10px 28px rgba(0,0,0,0.35)); }
+        .hero-logo svg { width:100%; height:100%; }
+        .private-note { display:block; margin-top:0.75rem; color:var(--text-secondary); font-size:0.8rem; }
 
         .container { max-width:1100px; margin:0 auto; padding:0 2rem; }
 
         .hero { background:linear-gradient(135deg,var(--primary) 0%,#0F3B8A 100%); color:white; padding:7rem 0 4rem; text-align:center; }
         .hero h1 { font-size:2.8rem; font-weight:800; margin-bottom:0.5rem; }
-        .hero p { font-size:1.2rem; opacity:0.9; max-width:600px; margin:0 auto; }
+        .hero p { font-size:1.2rem; opacity:0.9; max-width:680px; margin:0 auto; }
         .hero-tags { margin-top:1.5rem; display:flex; justify-content:center; gap:0.75rem; flex-wrap:wrap; }
         .hero-tags span { background:rgba(255,255,255,0.15); padding:0.4rem 1rem; border-radius:20px; font-size:0.85rem; backdrop-filter:blur(4px); }
         .hero-cta { margin-top:2rem; display:flex; justify-content:center; gap:1rem; flex-wrap:wrap; }
@@ -47,7 +70,7 @@
 
         section { padding:5rem 0; }
         section h2 { font-size:1.8rem; font-weight:700; margin-bottom:1rem; color:var(--primary); }
-        .section-desc { color:var(--text-secondary); margin-bottom:2.5rem; max-width:600px; font-size:1rem; }
+        .section-desc { color:var(--text-secondary); margin-bottom:2.5rem; max-width:700px; font-size:1rem; }
 
         .about-content { max-width:700px; }
         .about-content p { margin-bottom:1rem; color:var(--text-secondary); font-size:1rem; }
@@ -56,7 +79,7 @@
         @media (max-width:768px) { .project-grid { grid-template-columns:1fr; } }
         .project-card { background:var(--card); border-radius:16px; padding:2rem; border:1px solid var(--border); transition:transform 0.2s, box-shadow 0.2s; }
         .project-card:hover { transform:translateY(-4px); box-shadow:0 12px 40px rgba(0,0,0,0.1); }
-        .project-card h3 { font-size:1.4rem; font-weight:700; margin-bottom:0.25rem; }
+        .project-card h3 { font-size:1.4rem; font-weight:700; margin-bottom:0.25rem; display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap; }
         .project-card .subtitle { color:var(--text-secondary); font-size:0.9rem; margin-bottom:1rem; }
         .project-card .tech { display:flex; flex-wrap:wrap; gap:0.4rem; margin-bottom:1.25rem; }
         .project-card .tech span { background:#EFF6FF; color:var(--primary-light); font-size:0.75rem; padding:0.2rem 0.7rem; border-radius:12px; font-weight:500; }
@@ -65,14 +88,35 @@
         .project-card .stat { text-align:center; }
         .project-card .stat-value { font-size:1.3rem; font-weight:700; color:var(--primary); }
         .project-card .stat-label { font-size:0.75rem; color:var(--text-secondary); }
-        .project-card .btn { display:inline-block; padding:0.6rem 1.5rem; border-radius:8px; text-decoration:none; font-weight:600; font-size:0.9rem; margin-right:0.5rem; }
+        .project-card .actions { display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:1rem; }
+        .project-card .btn { display:inline-block; padding:0.6rem 1.5rem; border-radius:8px; text-decoration:none; font-weight:600; font-size:0.9rem; }
         .btn-primary { background:var(--primary); color:white; }
         .btn-primary:hover { background:var(--primary-light); }
         .btn-outline { border:2px solid var(--border); color:var(--text); }
         .btn-outline:hover { border-color:var(--primary); color:var(--primary); }
 
-        .project-img { width:100%; height:200px; border-radius:8px; margin-bottom:1rem; overflow:hidden; background:var(--bg); }
-        .project-img img { width:100%; height:100%; object-fit:cover; }
+        .project-img { width:100%; height:200px; border-radius:8px; margin-bottom:1rem; overflow:hidden; background:var(--bg); cursor:zoom-in; position:relative; }
+        .project-img img { width:100%; height:100%; object-fit:cover; display:block; transition:transform 0.3s; }
+        .project-img:hover img { transform:scale(1.03); }
+        .project-img::after { content:"🔍"; position:absolute; right:10px; bottom:10px; background:rgba(10,42,102,0.8); color:white; width:34px; height:34px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:0.9rem; opacity:0; transition:opacity 0.2s; }
+        .project-img:hover::after { opacity:1; }
+
+        .project-img.placeholder { cursor:default; display:flex; align-items:center; justify-content:center; }
+        .project-img.placeholder::after { content:none; }
+        .project-img.placeholder svg { width:64px; height:64px; opacity:0.9; filter:drop-shadow(0 4px 12px rgba(0,0,0,0.25)); }
+        .ph-fatura { background:linear-gradient(135deg,#1E40AF 0%,#3B82F6 100%); }
+        .ph-fatura-br { background:linear-gradient(135deg,#0F766E 0%,#14B8A6 100%); }
+        .ph-erp { background:linear-gradient(135deg,#0A2A66 0%,#1E40AF 100%); }
+
+        .project-status { display:inline-block; font-size:0.7rem; font-weight:600; padding:0.2rem 0.6rem; border-radius:10px; vertical-align:middle; }
+        .project-status.prod { background:#D1FAE5; color:#065F46; }
+        .project-status.priv { background:#FEF3C7; color:#92400E; }
+        .project-status.pub { background:#DBEAFE; color:#1E40AF; }
+
+        .gallery { display:grid; grid-template-columns:repeat(4,1fr); gap:0.5rem; margin-top:0.75rem; }
+        .gallery img { width:100%; height:70px; object-fit:cover; border-radius:6px; cursor:zoom-in; transition:opacity 0.2s; border:1px solid var(--border); }
+        .gallery img:hover { opacity:0.85; }
+        @media (max-width:768px) { .gallery { grid-template-columns:repeat(2,1fr); } }
 
         .feature-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:1.5rem; }
         .feature-card { background:var(--card); border-radius:12px; padding:1.5rem; border:1px solid var(--border); transition:transform 0.2s; }
@@ -89,11 +133,26 @@
         .contact .btn-outline-white:hover { background:rgba(255,255,255,0.1); }
 
         .footer { text-align:center; padding:2rem 0; color:var(--text-secondary); font-size:0.85rem; }
+        .footer a { color:var(--text-secondary); text-decoration:none; margin:0 0.5rem; }
+        .footer a:hover { color:var(--primary); }
+
+        .lightbox { display:none; position:fixed; inset:0; background:rgba(2,8,23,0.92); z-index:200; align-items:center; justify-content:center; padding:2rem; }
+        .lightbox.open { display:flex; }
+        .lightbox img { max-width:100%; max-height:85vh; border-radius:8px; box-shadow:0 20px 60px rgba(0,0,0,0.5); }
+        .lightbox-close { position:absolute; top:20px; right:30px; color:white; font-size:2.5rem; cursor:pointer; background:none; border:none; line-height:1; }
+        .lightbox-close:hover { color:var(--accent); }
+        .lightbox-nav { position:absolute; top:50%; transform:translateY(-50%); color:white; font-size:2.5rem; cursor:pointer; background:rgba(255,255,255,0.1); border:none; width:48px; height:48px; border-radius:50%; display:flex; align-items:center; justify-content:center; transition:background 0.2s; }
+        .lightbox-nav:hover { background:rgba(255,255,255,0.25); }
+        .lightbox-nav.prev { left:20px; }
+        .lightbox-nav.next { right:20px; }
+        .lightbox-counter { position:absolute; bottom:20px; left:50%; transform:translateX(-50%); color:white; font-size:0.85rem; opacity:0.8; }
 
         @media (max-width:768px) {
             .hero h1 { font-size:2rem; }
-            nav .links { gap:0.8rem; }
-            nav .links a { font-size:0.75rem; }
+            nav .links { position:fixed; top:56px; right:0; left:0; background:white; flex-direction:column; gap:0; padding:0.5rem 2rem 1.5rem; border-bottom:1px solid var(--border); display:none; box-shadow:0 12px 24px rgba(0,0,0,0.08); }
+            nav .links.open { display:flex; }
+            nav .links a { padding:0.7rem 0; font-size:0.95rem; }
+            .nav-toggle { display:block; }
             nav .logo span { display:none; }
         }
     </style>
@@ -102,7 +161,7 @@
 
 <nav>
     <div class="container">
-        <a href="#" class="logo">
+        <a href="#topo" class="logo">
             <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <defs><linearGradient id="lg-nav" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#0F3B8A"/><stop offset="1" stop-color="#0A2A66"/></linearGradient></defs>
                 <rect width="48" height="48" rx="12" fill="url(#lg-nav)"/>
@@ -115,7 +174,10 @@
             </svg>
             <span>Luiz Antonio</span>
         </a>
-        <div class="links">
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="links" id="navLinks">
             <a href="#projetos">Projetos</a>
             <a href="#clientes">Clientes</a>
             <a href="#skills">Competências</a>
@@ -125,7 +187,7 @@
     </div>
 </nav>
 
-<div class="hero">
+<div class="hero" id="topo">
     <div class="container">
         <div class="hero-logo">
             <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -140,14 +202,17 @@
             </svg>
         </div>
         <h1>Olá, sou o Luiz Antonio</h1>
-        <p>Web Developer especializado em CRMs, sistemas de gestão e aplicações web full-stack</p>
+        <p>Web Developer full-stack especializado em CRMs, ERPs e sistemas de gestão em produção — de PHP/MySQL clássico a Next.js + Supabase na Vercel.</p>
         <div class="hero-tags">
             <span>📍 Porto, Portugal</span>
             <span>PHP</span>
             <span>JavaScript</span>
+            <span>TypeScript</span>
+            <span>Next.js</span>
             <span>MySQL</span>
+            <span>Supabase</span>
             <span>Appwrite</span>
-            <span>HTML/CSS</span>
+            <span>Vercel</span>
             <span>APIs REST</span>
         </div>
         <div class="hero-cta">
@@ -161,21 +226,22 @@
     <section id="sobre">
         <h2>Sobre Mim</h2>
         <div class="about-content">
-            <p>Sou desenvolvedor web sediado no Porto, Portugal. Construo sistemas de gestão completos para pequenas e médias empresas — desde CRMs e ERPs até sites institucionais e landing pages.</p>
-            <p>Os meus projetos estão em produção, com código limpo, testes automatizados e documentação profissional. Trabalho maioritariamente com PHP, MySQL e JavaScript puro, sem depender de frameworks pesados — o que resulta em aplicações leves, rápidas e de fácil manutenção.</p>
+            <p>Sou desenvolvedor web sediado no Porto, Portugal. Construo sistemas de gestão completos para pequenas e médias empresas — CRMs, ERPs, plataformas de call center e SaaS de faturação, até sites institucionais e landing pages.</p>
+            <p>Os meus projetos estão em produção em negócios reais, com código limpo, testes automatizados e documentação profissional. Trabalho de PHP e MySQL clássicos (código leve, sem frameworks pesados) a stacks modernas com Next.js, TypeScript e Supabase com row-level security.</p>
             <p>Disponível para projetos remotos nacionais e internacionais.</p>
         </div>
     </section>
 
     <section id="projetos">
         <h2>Projetos em Destaque</h2>
-        <p class="section-desc">Sistemas completos, em produção, com documentação profissional e testes automatizados.</p>
+        <p class="section-desc">Sistemas completos em produção, com testes automatizados e documentação profissional. Código público com link direto; código privado acessível a clientes mediante pedido.</p>
         <div class="project-grid">
+
             <div class="project-card">
-                <div class="project-img">
+                <div class="project-img" data-galeria='["assets/crm-dashboard.png","assets/crm-clientes.png"]'>
                     <img src="assets/crm-dashboard.png" alt="Dashboard do PoupaPlus CRM" loading="lazy">
                 </div>
-                <h3>PoupaPlus CRM</h3>
+                <h3>PoupaPlus CRM <span class="project-status prod">🚀 Em produção</span><span class="project-status priv">🔒 Privado</span></h3>
                 <div class="subtitle">CRM de Telecomunicações · SPA Moderno</div>
                 <div class="tech">
                     <span>Vanilla JS</span>
@@ -191,15 +257,17 @@
                     <div class="stat"><div class="stat-value">22</div><div class="stat-label">Módulos</div></div>
                     <div class="stat"><div class="stat-value">50+</div><div class="stat-label">JS Files</div></div>
                 </div>
-                <a href="mailto:los486@hotmail.com?subject=Pedido%20de%20acesso%20ao%20codigo%20-%20PoupaPlus%20CRM" class="btn btn-primary">Pedir acesso ao código</a>
+                <div class="actions">
+                    <a href="mailto:los486@hotmail.com?subject=Pedido%20de%20acesso%20ao%20codigo%20-%20PoupaPlus%20CRM" class="btn btn-primary">Pedir acesso ao código</a>
+                </div>
                 <span class="private-note">🔒 Repositório privado · acesso partilhado com clientes</span>
             </div>
 
             <div class="project-card">
-                <div class="project-img">
+                <div class="project-img" data-galeria='["assets/gestaoBH-dashboard.png","assets/gestaoBH-orcamentos.png"]'>
                     <img src="assets/gestaoBH-dashboard.png" alt="Dashboard do Gestão BH ERP" loading="lazy">
                 </div>
-                <h3>Gestão BH Artefatos</h3>
+                <h3>Gestão BH Artefatos <span class="project-status prod">🚀 Em produção</span><span class="project-status priv">🔒 Privado</span></h3>
                 <div class="subtitle">ERP para Indústria · PHP/MySQL</div>
                 <div class="tech">
                     <span>PHP 7+</span>
@@ -214,9 +282,110 @@
                     <div class="stat"><div class="stat-value">16</div><div class="stat-label">Tabelas</div></div>
                     <div class="stat"><div class="stat-value">10</div><div class="stat-label">Módulos</div></div>
                 </div>
-                <a href="mailto:los486@hotmail.com?subject=Pedido%20de%20acesso%20ao%20codigo%20-%20Gestao%20BH%20ERP" class="btn btn-primary">Pedir acesso ao código</a>
+                <div class="actions">
+                    <a href="mailto:los486@hotmail.com?subject=Pedido%20de%20acesso%20ao%20codigo%20-%20Gestao%20BH%20ERP" class="btn btn-primary">Pedir acesso ao código</a>
+                </div>
                 <span class="private-note">🔒 Repositório privado · acesso partilhado com clientes</span>
             </div>
+
+            <div class="project-card">
+                <div class="project-img" data-galeria='["assets/gcc-gestao_call_center-landingPage.jpg","assets/gcc-gestao_call_center-pagLogin.jpg","assets/gcc-gestao_call_center-pagLogin0.jpg","assets/gcc-gestao_call_center-ferramVendas.jpg"]'>
+                    <img src="assets/gcc-gestao_call_center-landingPage.jpg" alt="Landing page do GCC Call Center" loading="lazy">
+                </div>
+                <h3>GCC Call Center <span class="project-status pub">🌐 Público</span></h3>
+                <div class="subtitle">Plataforma de Gestão de Call Center</div>
+                <div class="tech">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                    <span>Responsive</span>
+                </div>
+                <p>Plataforma de gestão de operações de call center para operadoras de telecomunicações (<strong>NOS, MEO e Vodafone</strong>): páginas de entrada, autenticação e ferramenta de vendas integrada — interface leve, rápida e responsiva.</p>
+                <div class="gallery">
+                    <img src="assets/gcc-gestao_call_center-landingPage.jpg" alt="Landing page" loading="lazy" data-galeria-target="0">
+                    <img src="assets/gcc-gestao_call_center-pagLogin.jpg" alt="Página de login" loading="lazy" data-galeria-target="1">
+                    <img src="assets/gcc-gestao_call_center-pagLogin0.jpg" alt="Página de login (alternativa)" loading="lazy" data-galeria-target="2">
+                    <img src="assets/gcc-gestao_call_center-ferramVendas.jpg" alt="Ferramenta de vendas" loading="lazy" data-galeria-target="3">
+                </div>
+                <div class="actions">
+                    <a href="https://github.com/losmanim/gcc-call-center" class="btn btn-primary" target="_blank" rel="noopener">Ver código no GitHub</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-img placeholder ph-fatura">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="white" stroke-width="1.8" stroke-linejoin="round"/>
+                        <polyline points="14 2 14 8 20 8" stroke="white" stroke-width="1.8" stroke-linejoin="round"/>
+                        <line x1="8" y1="13" x2="16" y2="13" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
+                        <line x1="8" y1="17" x2="13" y2="17" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h3>FaturaFlow <span class="project-status pub">🌐 Público</span></h3>
+                <div class="subtitle">SaaS de Faturação para PMEs</div>
+                <div class="tech">
+                    <span>Next.js 16</span>
+                    <span>TypeScript</span>
+                    <span>Tailwind</span>
+                    <span>Supabase RLS</span>
+                    <span>Vercel</span>
+                </div>
+                <p>SaaS de faturação completo: autenticação, CRUD de clientes, faturas com <strong>IVA</strong>, exportação em PDF e dashboard de métricas — com segurança em <strong>row-level security</strong> (Supabase RLS).</p>
+                <div class="actions">
+                    <a href="https://faturaflow-gilt.vercel.app" class="btn btn-primary" target="_blank" rel="noopener">Ver demo</a>
+                    <a href="https://github.com/losmanim/faturaflow" class="btn btn-outline" target="_blank" rel="noopener">Código</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-img placeholder ph-fatura-br">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <rect x="3" y="4" width="18" height="16" rx="2" stroke="white" stroke-width="1.8"/>
+                        <line x1="7" y1="9" x2="17" y2="9" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
+                        <line x1="7" y1="13" x2="17" y2="13" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
+                        <line x1="7" y1="17" x2="13" y2="17" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
+                        <circle cx="17.5" cy="16.5" r="2.5" stroke="#FBBF24" stroke-width="1.8"/>
+                    </svg>
+                </div>
+                <h3>FaturaFlow BR <span class="project-status pub">🌐 Público</span></h3>
+                <div class="subtitle">Emissor de NFS-e para MEI</div>
+                <div class="tech">
+                    <span>Next.js</span>
+                    <span>TypeScript</span>
+                    <span>Tailwind</span>
+                    <span>Supabase</span>
+                    <span>Focus NFe</span>
+                </div>
+                <p>Emissor de <strong>Nota Fiscal de Serviços Eletrônica (NFS-e)</strong> para MEI e prestadores de serviço no Simples Nacional — com adaptador fiscal em modo mock ou integração real via <strong>Focus NFe</strong>.</p>
+                <div class="actions">
+                    <a href="https://faturaflow-br.vercel.app" class="btn btn-primary" target="_blank" rel="noopener">Ver demo</a>
+                    <a href="https://github.com/losmanim/faturaflow-br" class="btn btn-outline" target="_blank" rel="noopener">Código</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-img placeholder ph-erp">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <circle cx="12" cy="12" r="9" stroke="white" stroke-width="1.8"/>
+                        <path d="M12 7v5l3.5 2" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M7.5 16.5c1.6-1.2 2.6-1.2 4.5 0s3.4 1.2 4.5 0" stroke="#FBBF24" stroke-width="1.8" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h3>ERP Restaurante Beira Rio <span class="project-status prod">🚀 Em produção</span></h3>
+                <div class="subtitle">Micro-gestão de Restaurante</div>
+                <div class="tech">
+                    <span>Next.js</span>
+                    <span>TypeScript</span>
+                    <span>Supabase</span>
+                    <span>Tailwind</span>
+                    <span>Vercel</span>
+                </div>
+                <p>ERP para micro-restaurante: <strong>cardápio, estoque, compras, financeiro e caixa</strong> — autenticação com e-mail/senha, deploy contínuo na Vercel e site institucional do cliente com <strong>Vercel Web Analytics</strong>.</p>
+                <div class="actions">
+                    <a href="https://erp-restaurante-beira-rio.vercel.app" class="btn btn-primary" target="_blank" rel="noopener">Abrir app</a>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -271,17 +440,22 @@
 
     <section id="skills">
         <h2>Competências Técnicas</h2>
-        <p class="section-desc">Stack principal com que trabalho diariamente.</p>
+        <p class="section-desc">Stack com que trabalho diariamente, do backend clássico ao frontend moderno.</p>
         <div class="feature-grid">
             <div class="feature-card">
                 <div class="icon">⚙️</div>
-                <h4>Backend</h4>
-                <p>PHP 7+/8+, MySQL, PDO, SQL, Appwrite (BaaS), APIs REST, Serverless Functions</p>
+                <h4>Backend & Dados</h4>
+                <p>PHP 7+/8+, MySQL, PDO, SQL, Node.js, Supabase (RLS), Appwrite (BaaS), APIs REST</p>
             </div>
             <div class="feature-card">
                 <div class="icon">🎨</div>
                 <h4>Frontend</h4>
-                <p>JavaScript Vanilla, Bootstrap 5, CSS3, HTML5, PWA, SPAs com lazy loading</p>
+                <p>JavaScript, TypeScript, React, Next.js, Tailwind CSS, Bootstrap 5, HTML5, CSS3, PWA</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🚀</div>
+                <h4>Cloud & Deploy</h4>
+                <p>Vercel (estático, Next.js, Web Analytics, Speed Insights), GitHub Pages, Serverless Functions</p>
             </div>
             <div class="feature-card">
                 <div class="icon">🧪</div>
@@ -296,12 +470,7 @@
             <div class="feature-card">
                 <div class="icon">🔒</div>
                 <h4>Segurança</h4>
-                <p>PDO Prepared Statements, bcrypt, proteção XSS, rate limiting, autenticação server-side</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon">📱</div>
-                <h4>Outros</h4>
-                <p>Design responsivo, Google Calendar API, documentação técnica, manutenção de sistemas legados</p>
+                <p>PDO Prepared Statements, bcrypt, Supabase RLS, proteção XSS, rate limiting, autenticação server-side</p>
             </div>
         </div>
     </section>
@@ -328,7 +497,7 @@
             <div class="feature-card">
                 <div class="icon">🔧</div>
                 <h4>Manutenção & Melhorias</h4>
-                <p>Dar manutenção a sistemas existentes, adicionar funcionalidades, refatorar código legado.</p>
+                <p>Manutenção de sistemas existentes, novas funcionalidades, refatoração de código legado.</p>
             </div>
         </div>
     </section>
@@ -337,16 +506,104 @@
 <div class="contact" id="contacto">
     <div class="container">
         <h2>Vamos Trabalhar Juntos</h2>
-        <p>Freelancer no Porto, Portugal · Disponível para projetos remotos</p>
+        <p>Freelancer no Porto, Portugal · Disponível para projetos remotos nacionais e internacionais</p>
         <a href="mailto:los486@hotmail.com" class="btn btn-white">los486@hotmail.com</a>
-        <a href="https://www.upwork.com/freelancers/~018a8878b023c31679" class="btn btn-outline-white">Upwork</a>
         <a href="https://www.linkedin.com/in/luiz-antonio-de-oliveira-silva-84945197" class="btn btn-outline-white">LinkedIn</a>
+        <a href="https://github.com/losmanim" class="btn btn-outline-white">GitHub</a>
     </div>
 </div>
 
 <div class="footer">
     <p>&copy; 2026 Luiz Antonio · Web Developer · Porto, Portugal</p>
+    <p><a href="https://github.com/losmanim" target="_blank" rel="noopener">GitHub</a> · <a href="https://www.linkedin.com/in/luiz-antonio-de-oliveira-silva-84945197" target="_blank" rel="noopener">LinkedIn</a> · <a href="mailto:los486@hotmail.com">Email</a></p>
 </div>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-label="Visualização da imagem">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Fechar">&times;</button>
+    <button class="lightbox-nav prev" id="lightboxPrev" aria-label="Anterior">&#10094;</button>
+    <img id="lightboxImg" src="" alt="">
+    <button class="lightbox-nav next" id="lightboxNext" aria-label="Próxima">&#10095;</button>
+    <div class="lightbox-counter" id="lightboxCounter"></div>
+</div>
+
+<script>
+(function () {
+    var navToggle = document.getElementById("navToggle");
+    var navLinks = document.getElementById("navLinks");
+    navToggle.addEventListener("click", function () {
+        navLinks.classList.toggle("open");
+    });
+    navLinks.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+            navLinks.classList.remove("open");
+        });
+    });
+
+    var lightbox = document.getElementById("lightbox");
+    var lightboxImg = document.getElementById("lightboxImg");
+    var lightboxCounter = document.getElementById("lightboxCounter");
+    var galeriaAtual = [];
+    var indiceAtual = 0;
+
+    function abrirLightbox(galeria, indice) {
+        galeriaAtual = galeria;
+        indiceAtual = indice || 0;
+        atualizarImagem();
+        lightbox.classList.add("open");
+        document.body.style.overflow = "hidden";
+    }
+
+    function fecharLightbox() {
+        lightbox.classList.remove("open");
+        document.body.style.overflow = "";
+    }
+
+    function atualizarImagem() {
+        if (galeriaAtual.length === 0) return;
+        lightboxImg.src = galeriaAtual[indiceAtual];
+        lightboxCounter.textContent = (indiceAtual + 1) + " / " + galeriaAtual.length;
+    }
+
+    function navegar(direcao) {
+        if (galeriaAtual.length === 0) return;
+        indiceAtual = (indiceAtual + direcao + galeriaAtual.length) % galeriaAtual.length;
+        atualizarImagem();
+    }
+
+    document.querySelectorAll(".project-img").forEach(function (imgContainer) {
+        imgContainer.addEventListener("click", function () {
+            abrirLightbox(JSON.parse(this.dataset.galeria), 0);
+        });
+    });
+
+    document.querySelectorAll(".gallery img").forEach(function (thumb) {
+        thumb.addEventListener("click", function () {
+            var card = this.closest(".project-card");
+            var capa = card.querySelector(".project-img");
+            abrirLightbox(JSON.parse(capa.dataset.galeria), parseInt(this.dataset.galeriaTarget, 10));
+        });
+    });
+
+    document.getElementById("lightboxClose").addEventListener("click", fecharLightbox);
+    document.getElementById("lightboxPrev").addEventListener("click", function () { navegar(-1); });
+    document.getElementById("lightboxNext").addEventListener("click", function () { navegar(1); });
+    lightbox.addEventListener("click", function (e) {
+        if (e.target === lightbox) fecharLightbox();
+    });
+    document.addEventListener("keydown", function (e) {
+        if (!lightbox.classList.contains("open")) return;
+        if (e.key === "Escape") fecharLightbox();
+        if (e.key === "ArrowLeft") navegar(-1);
+        if (e.key === "ArrowRight") navegar(1);
+    });
+    var touchStartX = 0;
+    lightbox.addEventListener("touchstart", function (e) { touchStartX = e.changedTouches[0].clientX; }, { passive: true });
+    lightbox.addEventListener("touchend", function (e) {
+        var dx = e.changedTouches[0].clientX - touchStartX;
+        if (Math.abs(dx) > 50) navegar(dx > 0 ? -1 : 1);
+    });
+})();
+</script>
 
 </body>
 </html>

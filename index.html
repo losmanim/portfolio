@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luiz Antonio · Web Developer · CRMs, ERPs e Sistemas de Gestão</title>
-    <meta name="description" content="Portfólio de Luiz Antonio — Web Developer. CRMs, ERPs e SaaS multi-tenant em produção. PHP, JavaScript, TypeScript, Next.js, Tailwind, Supabase, Appwrite, MySQL. Testes automatizados.">
+    <meta name="description" content="Portfólio de Luiz Antonio — Web Developer. CRMs, ERPs e SaaS multi-tenant em produção. PHP, JavaScript, TypeScript, Next.js, Tailwind, Supabase, Appwrite, MySQL. 1400+ testes automatizados.">
     <meta name="author" content="Luiz Antonio">
     <meta property="og:title" content="Luiz Antonio · Web Developer · CRMs, ERPs e SaaS">
     <meta property="og:description" content="Sistemas de gestão, CRMs, ERPs e aplicações web em produção.">
@@ -14,587 +14,691 @@
     <meta name="theme-color" content="#0A2A66">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><defs><linearGradient id='bg' x1='0' y1='0' x2='48' y2='48' gradientUnits='userSpaceOnUse'><stop offset='0' stop-color='%230F3B8A'/><stop offset='1' stop-color='%230A2A66'/></linearGradient></defs><rect width='48' height='48' rx='12' fill='url(%23bg)'/><rect x='11' y='11' width='12' height='12' rx='3' fill='%23FFFFFF' fill-opacity='0.95'/><rect x='25' y='11' width='12' height='7' rx='3' fill='%23FFFFFF' fill-opacity='0.6'/><rect x='25' y='20' width='12' height='7' rx='3' fill='%23FFFFFF' fill-opacity='0.6'/><rect x='11' y='25' width='12' height='12' rx='3' fill='%23FBBF24'/><path d='M13.8 33.5 L16.6 30.2 L18.9 31.8 L22.2 27.3' stroke='%230A2A66' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' fill='none'/><circle cx='22.2' cy='27.3' r='1.4' fill='%230A2A66'/></svg>">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Luiz Antonio",
-        "jobTitle": "Web Developer & Freelancer",
-        "url": "https://losmanim.github.io/portfolio/",
-        "email": "mailto:los486@hotmail.com",
-        "knowsAbout": ["PHP", "JavaScript", "TypeScript", "Next.js", "React", "Tailwind CSS", "MySQL", "Supabase", "Appwrite", "Prisma", "APIs REST", "WhatsApp Business", "CRMs", "ERPs", "SaaS", "PWA", "Evolution API"],
-        "sameAs": ["https://github.com/losmanim", "https://www.linkedin.com/in/luiz-antonio-de-oliveira-silva-84945197"]
-    }
-    </script>
     <style>
         :root {
-            --bg:#050B1A; --card:#0B1325; --text:#F1F5F9; --text-secondary:#94A3B8;
-            --primary:#0A2A66; --primary-light:#1E40AF; --accent:#00D4FF;
-            --border:#1E293B; --success:#10B981; --warning:#F59E0B; --radius:12px;
+            --bg:#060D1B; --bg-soft:#0B1325; --card:#0E1729; --card-hover:#131E33;
+            --text:#F1F5F9; --muted:#94A3B8; --primary:#0A2A66; --primary-light:#1E40AF;
+            --accent:#00D4FF; --accent-soft:rgba(0,212,255,.12); --border:#1E293B;
+            --success:#10B981; --warning:#F59E0B; --radius:14px;
         }
-        * { margin:0; padding:0; box-sizing:border-box; }
-        html { scroll-behavior:smooth; }
-        body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); line-height:1.6; }
-        a { color:inherit; text-decoration:none; }
-        img { max-width:100%; display:block; }
+        *{margin:0;padding:0;box-sizing:border-box}
+        html{scroll-behavior:smooth}
+        body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+        a{color:inherit;text-decoration:none}
+        img{max-width:100%;display:block}
 
-        nav { position:fixed; top:0; left:0; right:0; background:rgba(5,11,26,0.92); backdrop-filter:blur(10px); border-bottom:1px solid var(--border); z-index:100; }
-        nav .container { display:flex; align-items:center; justify-content:space-between; height:64px; max-width:1100px; margin:0 auto; padding:0 2rem; }
-        nav .logo { display:flex; align-items:center; gap:0.75rem; font-weight:800; font-size:1.1rem; letter-spacing:-0.02em; }
-        nav .logo svg { width:30px; height:30px; }
-        nav .logo span { color:var(--text); }
-        nav .links { display:flex; gap:1.75rem; align-items:center; }
-        nav .links a { color:var(--text-secondary); font-size:0.9rem; font-weight:500; transition:color 0.2s; }
-        nav .links a:hover { color:var(--accent); }
-        .nav-toggle { display:none; background:none; border:none; cursor:pointer; padding:0.5rem; }
-        .nav-toggle span { display:block; width:24px; height:2px; background:var(--accent); margin:5px 0; border-radius:2px; transition:0.3s; }
+        /* NAV */
+        nav{position:fixed;top:0;left:0;right:0;background:rgba(6,13,27,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);z-index:100}
+        nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;max-width:1180px;margin:0 auto;padding:0 24px}
+        .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.05rem}
+        .logo svg{width:32px;height:32px}
+        .nav-links{display:flex;gap:28px;align-items:center}
+        .nav-links a{color:var(--muted);font-size:.9rem;font-weight:500;transition:color .2s}
+        .nav-links a:hover{color:var(--accent)}
+        .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px}
+        .nav-toggle span{display:block;width:24px;height:2px;background:var(--accent);margin:5px 0;border-radius:2px}
 
-        .hero { background:radial-gradient(circle at 50% 0%, #121B30 0%, #050B1A 60%); color:white; padding:9rem 0 6rem; text-align:center; position:relative; overflow:hidden; }
-        .hero-logo { width:80px; height:80px; margin:0 auto 1.5rem; filter:drop-shadow(0 10px 28px rgba(0,0,0,0.45)); }
-        .hero-logo svg { width:100%; height:100%; }
-        .hero h1 { font-size:2.6rem; font-weight:800; margin-bottom:0.6rem; letter-spacing:-0.02em; line-height:1.15; }
-        .hero h1 .grad { color:var(--accent); }
-        .hero p { font-size:1.15rem; color:var(--text-secondary); max-width:620px; margin:0 auto 1.75rem; }
-        .hero-tags { margin-top:1rem; display:flex; justify-content:center; gap:0.5rem; flex-wrap:wrap; }
-        .hero-tags span { background:rgba(15,59,138,0.15); color:var(--text-secondary); padding:0.35rem 1rem; border-radius:20px; font-size:0.8rem; font-weight:500; border:1px solid rgba(0,212,255,0.15); backdrop-filter:blur(4px); }
-        .hero-cta { margin-top:1.75rem; display:flex; justify-content:center; gap:0.75rem; flex-wrap:wrap; }
+        /* HERO */
+        .hero{position:relative;padding:140px 24px 90px;text-align:center;overflow:hidden;background:radial-gradient(ellipse at 50% 0%,#122040 0%,var(--bg) 65%)}
+        .hero::before{content:'';position:absolute;inset:-20%;background:radial-gradient(circle at 30% 20%,rgba(0,212,255,.08),transparent 45%),radial-gradient(circle at 70% 60%,rgba(30,64,175,.12),transparent 40%);pointer-events:none}
+        .hero .wrap{position:relative;max-width:900px;margin:0 auto}
+        .hero-logo{width:84px;height:84px;margin:0 auto 28px;filter:drop-shadow(0 12px 30px rgba(0,0,0,.4));animation:float 6s ease-in-out infinite}
+        @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+        .hero h1{font-size:clamp(2rem,5vw,3.4rem);font-weight:800;line-height:1.15;letter-spacing:-.03em;margin-bottom:18px}
+        .hero h1 .grad{background:linear-gradient(90deg,var(--accent),#60A5FA);-webkit-background-clip:text;background-clip:text;color:transparent}
+        .hero p{font-size:1.1rem;color:var(--muted);max-width:680px;margin:0 auto 28px}
+        .hero-tags{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:32px}
+        .hero-tags span{padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);color:#CBD5E1;font-size:.82rem;font-weight:500}
+        .hero-cta{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+        .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 22px;border-radius:10px;font-weight:600;font-size:.92rem;border:1px solid transparent;cursor:pointer;transition:all .25s;font-family:inherit}
+        .btn-primary{background:linear-gradient(135deg,var(--primary-light),var(--primary));color:#fff;box-shadow:0 8px 24px rgba(30,64,175,.35)}
+        .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(30,64,175,.45)}
+        .btn-outline{background:rgba(255,255,255,.02);border-color:var(--border);color:var(--text)}
+        .btn-outline:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
+        .btn-white{background:#fff;color:var(--primary)}
+        .btn-white:hover{background:#f1f5f9;transform:translateY(-2px)}
 
-        section { padding:5rem 0; position:relative; }
-        .container { max-width:1100px; margin:0 auto; padding:0 2rem; }
-        section h2 { font-size:1.75rem; font-weight:700; margin-bottom:0.75rem; color:var(--text); display:flex; align-items:center; gap:0.5rem; }
-        .section-desc { color:var(--text-secondary); margin-bottom:2rem; max-width:700px; font-size:1rem; }
+        /* SECTIONS */
+        .container{max-width:1180px;margin:0 auto;padding:0 24px}
+        section{padding:88px 0}
+        .section-head{margin-bottom:40px}
+        .section-kicker{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px}
+        .section-head h2{font-size:clamp(1.8rem,3.5vw,2.6rem);line-height:1.2;letter-spacing:-.02em;margin-bottom:12px}
+        .section-head p{color:var(--muted);max-width:720px;font-size:1rem}
 
-        .btn { display:inline-flex; align-items:center; gap:0.45rem; padding:0.7rem 1.6rem; border-radius:10px; text-decoration:none; font-weight:600; font-size:0.9rem; transition:all 0.2s; border:none; cursor:pointer; font-family:inherit; }
-        .btn-primary { background:var(--primary); color:white; }
-        .btn-primary:hover { background:var(--primary-light); transform:translateY(-2px); }
-        .btn-outline { border:1px solid var(--border); color:var(--text); background:transparent; }
-        .btn-outline:hover { border-color:var(--accent); color:var(--accent); transform:translateY(-2px); }
-        .btn-white { background:white; color:var(--primary); }
-        .btn-white:hover { background:#f1f5f9; transform:translateY(-2px); }
+        /* METRICS */
+        .metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:-40px;position:relative;z-index:2}
+        .metric{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid var(--border);border-radius:var(--radius);padding:28px 20px;text-align:center;backdrop-filter:blur(8px)}
+        .metric .num{font-size:2.2rem;font-weight:800;color:var(--accent);line-height:1;margin-bottom:8px}
+        .metric .label{color:#CBD5E1;font-size:.88rem;font-weight:500}
+        .metric .sub{color:var(--muted);font-size:.75rem;margin-top:4px}
 
-        .metrics { display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:1.25rem; margin-bottom:3rem; }
-        .metric-card { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:1.75rem; text-align:center; }
-        .metric-card .big { font-size:2rem; font-weight:800; color:var(--accent); line-height:1.1; }
-        .metric-card .label { color:var(--text-secondary); font-size:0.8rem; margin-top:0.35rem; }
+        /* ABOUT */
+        .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:start}
+        .about-text p{color:#CBD5E1;margin-bottom:16px;font-size:1rem}
+        .about-text strong{color:#fff}
+        .about-highlights{display:grid;gap:14px}
+        .highlight{display:flex;gap:14px;padding:18px;border-radius:12px;background:var(--card);border:1px solid var(--border);transition:all .25s}
+        .highlight:hover{border-color:#334155;transform:translateX(4px)}
+        .highlight .icon{width:44px;height:44px;border-radius:10px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
+        .highlight h4{font-size:.95rem;margin-bottom:2px}
+        .highlight p{color:var(--muted);font-size:.82rem;line-height:1.45}
 
-        .filtros { display:flex; justify-content:center; gap:0.5rem; margin-bottom:2rem; flex-wrap:wrap; }
-        .filtro { padding:0.4rem 1.1rem; border-radius:20px; border:1px solid var(--border); background:transparent; color:var(--text-secondary); font-size:0.82rem; cursor:pointer; font-weight:500; transition:all 0.2s; }
-        .filtro.active { border-color:var(--accent); color:var(--accent); background:rgba(0,212,255,0.12); }
+        /* PROJECTS */
+        .filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:32px}
+        .filter{padding:10px 16px;border-radius:999px;border:1px solid var(--border);background:rgba(255,255,255,.02);color:var(--muted);font-size:.85rem;font-weight:600;cursor:pointer;transition:all .2s;font-family:inherit}
+        .filter:hover{border-color:#334155;color:#fff}
+        .filter.active{background:var(--accent-soft);border-color:rgba(0,212,255,.3);color:var(--accent)}
+        .projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+        .project{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:all .3s;display:flex;flex-direction:column}
+        .project:hover{transform:translateY(-6px);border-color:#334155;box-shadow:0 20px 40px rgba(0,0,0,.25)}
+        .project-media{position:relative;aspect-ratio:16/10;overflow:hidden;background:#0B1325}
+        .project-media img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+        .project:hover .project-media img{transform:scale(1.04)}
+        .project-media .overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(6,13,27,.55),transparent 50%);pointer-events:none}
+        .project-cat{position:absolute;top:14px;left:14px;padding:6px 10px;border-radius:999px;background:rgba(6,13,27,.7);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.1);font-size:.7rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#E2E8F0}
+        .project-body{padding:22px;display:flex;flex-direction:column;flex:1}
+        .project-body h3{font-size:1.15rem;line-height:1.3;margin-bottom:6px}
+        .project-body .subtitle{color:var(--muted);font-size:.85rem;margin-bottom:12px;line-height:1.5}
+        .tech{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+        .tech span{padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);color:#CBD5E1;font-size:.72rem;font-weight:500}
+        .project-stats{display:flex;gap:18px;margin-bottom:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,.06);margin-top:auto}
+        .project-stats .stat{font-size:.75rem;color:var(--muted)}
+        .project-stats .stat b{display:block;font-size:1rem;color:var(--text);font-weight:700}
+        .project-actions{display:flex;gap:10px;flex-wrap:wrap}
+        .project-actions .btn{padding:9px 14px;font-size:.82rem;border-radius:8px}
+        .private-note{display:block;margin-top:10px;font-size:.72rem;color:var(--muted)}
 
-        .project-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; }
-        @media (max-width:1024px){ .project-grid { grid-template-columns:repeat(2,1fr); } }
-        @media (max-width:768px){ .project-grid { grid-template-columns:1fr; } }
-        .project-card { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:1.5rem; transition:all 0.25s; position:relative; overflow:hidden; }
-        .project-card:hover { border-color:#334155; transform:translateY(-3px); }
-        .project-tag { position:absolute; top:1rem; right:1rem; font-size:0.7rem; font-weight:700; padding:0.25rem 0.7rem; border-radius:10px; letter-spacing:0.05em; text-transform:uppercase; }
-        .tag-prod { background:rgba(16,185,129,0.15); color:var(--success); border:1px solid rgba(16,185,129,0.25); }
-        .tag-priv { background:rgba(245,158,11,0.15); color:var(--warning); border:1px solid rgba(245,158,11,0.25); }
-        .tag-pub { background:rgba(0,212,255,0.15); color:var(--accent); border:1px solid rgba(0,212,255,0.25); }
-        .project-img { width:100%; height:130px; border-radius:8px; overflow:hidden; margin-bottom:1rem; background:#0B1325; position:relative; }
-        .project-img img { width:100%; height:100%; object-fit:cover; transition:transform 0.3s; }
-        .project-img.placeholder { cursor:default; display:flex; align-items:center; justify-content:center; color:var(--text-secondary); font-size:1.5rem; border:1px dashed #1E293B; }
-        .project-img::after { content:'🔍'; position:absolute; right:10px; bottom:10px; background:rgba(0,212,255,0.9); color:#050B1A; width:26px; height:26px; border-radius:6px; display:flex; align-items:center; justify-content:center; font-size:0.7rem; opacity:0; transition:opacity 0.2s; }
-        .project-img:hover::after { opacity:1; }
-        .project-card h3 { font-size:1.1rem; font-weight:700; margin-bottom:0.2rem; color:var(--text); }
-        .project-card .subtitle { color:var(--text-secondary); font-size:0.8rem; margin-bottom:0.65rem; line-height:1.45; }
-        .project-card .tech { display:flex; flex-wrap:wrap; gap:0.35rem; margin-bottom:0.65rem; }
-        .project-card .tech span { background:#0B1325; color:var(--accent); font-size:0.68rem; padding:0.18rem 0.55rem; border-radius:8px; font-weight:500; border:1px solid rgba(0,212,255,0.15); }
-        .project-card p { color:var(--text-secondary); font-size:0.82rem; margin-bottom:0.65rem; line-height:1.5; }
-        .project-card .stats { display:flex; gap:1rem; margin-bottom:0.65rem; flex-wrap:wrap; }
-        .project-card .stat { font-size:0.75rem; color:var(--text-secondary); }
-        .project-card .stat b { color:var(--text); font-size:0.85rem; }
-        .project-card .actions { display:flex; gap:0.5rem; margin-top:0.5rem; flex-wrap:wrap; }
-        .project-card .btn { padding:0.5rem 1.1rem; font-size:0.82rem; }
-        .project-card .private-note { display:block; margin-top:0.5rem; font-size:0.72rem; color:var(--text-secondary); border-top:1px solid var(--border); padding-top:0.5rem; }
+        /* SKILLS / SERVICES */
+        .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+        .feature{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;transition:all .25s}
+        .feature:hover{border-color:#334155;transform:translateY(-3px)}
+        .feature .icon{font-size:1.8rem;margin-bottom:12px;display:block}
+        .feature h4{font-size:1rem;margin-bottom:6px}
+        .feature p{color:var(--muted);font-size:.85rem;line-height:1.55}
 
-        .feature-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1.25rem; }
-        .feature-card { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:1.5rem; transition:all 0.2s; }
-        .feature-card:hover { border-color:#334155; transform:translateY(-2px); }
-        .feature-card .icon { font-size:1.75rem; margin-bottom:0.6rem; display:block; }
-        .feature-card h4 { font-weight:600; margin-bottom:0.4rem; color:var(--text); }
-        .feature-card p { font-size:0.82rem; color:var(--text-secondary); line-height:1.55; }
+        /* CONTACT / FOOTER */
+        .contact{background:linear-gradient(180deg,var(--bg-soft),var(--bg));border-top:1px solid var(--border);padding:80px 24px;text-align:center}
+        .contact h2{font-size:clamp(1.8rem,3vw,2.4rem);margin-bottom:12px}
+        .contact p{color:var(--muted);margin-bottom:28px;font-size:1rem}
+        .contact .actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+        .footer{padding:32px 24px;text-align:center;color:var(--muted);font-size:.85rem;border-top:1px solid var(--border)}
+        .footer a{color:var(--muted);margin:0 8px}
+        .footer a:hover{color:var(--accent)}
 
-        .contact { background:var(--card); color:white; text-align:center; padding:4rem 0; border-top:1px solid var(--border); margin-top:2rem; }
-        .contact h2 { color:white; margin-bottom:0.75rem; }
-        .contact p { opacity:0.9; margin-bottom:1.75rem; font-size:1rem; }
-        .contact .btn { margin:0.3rem; }
+        /* LIGHTBOX */
+        .lightbox{display:none;position:fixed;inset:0;background:rgba(6,13,27,.95);z-index:200;align-items:center;justify-content:center;padding:24px}
+        .lightbox.open{display:flex}
+        .lightbox img{max-width:92%;max-height:82vh;border-radius:10px;box-shadow:0 20px 60px rgba(0,0,0,.6)}
+        .lightbox-close{position:absolute;top:20px;right:28px;color:#fff;font-size:2rem;cursor:pointer;background:none;border:none}
+        .lightbox-nav{position:absolute;top:50%;transform:translateY(-50%);color:#fff;font-size:1.8rem;cursor:pointer;background:rgba(30,41,59,.7);border:none;width:44px;height:44px;border-radius:50%}
+        .lightbox-nav.prev{left:20px}.lightbox-nav.next{right:20px}
+        .lightbox-counter{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);color:#fff;font-size:.85rem;opacity:.8}
 
-        .footer { text-align:center; padding:2.5rem 0; color:var(--text-secondary); font-size:0.82rem; border-top:1px solid var(--border); }
-        .footer a { color:var(--text-secondary); margin:0 0.5rem; }
-        .footer a:hover { color:var(--accent); }
+        /* REVEAL */
+        .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+        .reveal.visible{opacity:1;transform:none}
 
-        .lightbox { display:none; position:fixed; inset:0; background:rgba(5,11,26,0.95); z-index:200; align-items:center; justify-content:center; padding:2rem; }
-        .lightbox.open { display:flex; }
-        .lightbox img { max-width:92%; max-height:82vh; border-radius:8px; box-shadow:0 20px 60px rgba(0,0,0,0.6); }
-        .lightbox-close { position:absolute; top:25px; right:35px; color:white; font-size:2rem; cursor:pointer; background:none; border:none; line-height:1; }
-        .lightbox-close:hover { color:var(--accent); }
-        .lightbox-nav { position:absolute; top:50%; transform:translateY(-50%); color:white; font-size:2rem; cursor:pointer; background:rgba(30,41,59,0.6); border:none; width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; }
-        .lightbox-nav.prev { left:20px; }
-        .lightbox-nav.next { right:20px; }
-        .lightbox-counter { position:absolute; bottom:25px; left:50%; transform:translateX(-50%); color:white; font-size:0.8rem; opacity:0.8; }
-
-        @media (max-width:768px){
-            nav .links { position:fixed; top:64px; right:0; left:0; background:rgba(5,11,26,0.95); flex-direction:column; gap:0; padding:1rem 2rem 1.5rem; border-bottom:1px solid var(--border); display:none; box-shadow:0 12px 24px rgba(0,0,0,0.4); }
-            nav .links.open { display:flex; }
-            nav .links a { padding:0.8rem 0; font-size:1rem; }
-            .nav-toggle { display:block; }
-            nav .logo span { display:none; }
-            .hero h1 { font-size:2rem; }
-            .metrics { grid-template-columns:1fr; }
+        /* RESPONSIVE */
+        @media(max-width:1024px){.projects-grid{grid-template-columns:repeat(2,1fr)}.feature-grid{grid-template-columns:repeat(2,1fr)}}
+        @media(max-width:768px){
+            .nav-toggle{display:block}
+            .nav-links{display:none;position:absolute;top:68px;left:0;right:0;background:rgba(6,13,27,.97);flex-direction:column;padding:20px 24px;gap:16px;border-bottom:1px solid var(--border)}
+            .nav-links.open{display:flex}
+            .metrics{grid-template-columns:repeat(2,1fr);margin-top:-20px}
+            .about-grid{grid-template-columns:1fr}
+            .projects-grid,.feature-grid{grid-template-columns:1fr}
+            section{padding:64px 0}
         }
+        @media(max-width:480px){.metrics{grid-template-columns:1fr 1fr}.metric .num{font-size:1.8rem}}
     </style>
 </head>
 <body>
 
 <nav>
-    <div class="container">
-        <a href="#topo" class="logo">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <defs><linearGradient id="lg-nav" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#0F3B8A"/><stop offset="1" stop-color="#0A2A66"/></linearGradient></defs>
-                <rect width="48" height="48" rx="12" fill="url(#lg-nav)"/>
-                <rect x="11" y="11" width="12" height="12" rx="3" fill="#FFFFFF" fill-opacity="0.95"/>
-                <rect x="25" y="11" width="12" height="7" rx="3" fill="#FFFFFF" fill-opacity="0.6"/>
-                <rect x="25" y="20" width="12" height="7" rx="3" fill="#FFFFFF" fill-opacity="0.6"/>
-                <rect x="11" y="25" width="12" height="12" rx="3" fill="#FBBF24"/>
-                <path d="M13.8 33.5 L16.6 30.2 L18.9 31.8 L22.2 27.3" stroke="#0A2A66" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                <circle cx="22.2" cy="27.3" r="1.4" fill="#0A2A66"/>
-            </svg>
+    <div class="wrap">
+        <a href="#topo" class="logo" aria-label="Início">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="lg" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#0F3B8A"/><stop offset="1" stop-color="#0A2A66"/></linearGradient></defs><rect width="48" height="48" rx="12" fill="url(#lg)"/><rect x="11" y="11" width="12" height="12" rx="3" fill="#fff" fill-opacity=".95"/><rect x="25" y="11" width="12" height="7" rx="3" fill="#fff" fill-opacity=".6"/><rect x="25" y="20" width="12" height="7" rx="3" fill="#fff" fill-opacity=".6"/><rect x="11" y="25" width="12" height="12" rx="3" fill="#FBBF24"/><path d="M13.8 33.5 L16.6 30.2 L18.9 31.8 L22.2 27.3" stroke="#0A2A66" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="22.2" cy="27.3" r="1.4" fill="#0A2A66"/></svg>
             <span>Luiz Antonio</span>
         </a>
         <button class="nav-toggle" id="navToggle" aria-label="Abrir menu"><span></span><span></span><span></span></button>
-        <div class="links" id="navLinks">
-            <a href="#projetos">Projetos</a>
+        <div class="nav-links" id="navLinks">
             <a href="#sobre">Sobre</a>
-            <a href="#skills">Skills</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#skills">Competências</a>
             <a href="#servicos">Serviços</a>
             <a href="#contacto">Contacto</a>
         </div>
     </div>
 </nav>
 
-<div class="hero" id="topo">
-    <div class="container">
+<header class="hero" id="topo">
+    <div class="wrap">
         <div class="hero-logo">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <defs><linearGradient id="lg-hero" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#1E40AF"/><stop offset="1" stop-color="#0A2A66"/></linearGradient></defs>
-                <rect width="48" height="48" rx="12" fill="url(#lg-hero)" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
-                <rect x="11" y="11" width="12" height="12" rx="3" fill="#FFFFFF" fill-opacity="0.95"/>
-                <rect x="25" y="11" width="12" height="7" rx="3" fill="#FFFFFF" fill-opacity="0.6"/>
-                <rect x="25" y="20" width="12" height="7" rx="3" fill="#FFFFFF" fill-opacity="0.6"/>
-                <rect x="11" y="25" width="12" height="12" rx="3" fill="#FBBF24"/>
-                <path d="M13.8 33.5 L16.6 30.2 L18.9 31.8 L22.2 27.3" stroke="#0A2A66" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                <circle cx="22.2" cy="27.3" r="1.4" fill="#0A2A66"/>
-            </svg>
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="lg2" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#1E40AF"/><stop offset="1" stop-color="#0A2A66"/></linearGradient></defs><rect width="48" height="48" rx="12" fill="url(#lg2)" stroke="rgba(255,255,255,.25)"/><rect x="11" y="11" width="12" height="12" rx="3" fill="#fff" fill-opacity=".95"/><rect x="25" y="11" width="12" height="7" rx="3" fill="#fff" fill-opacity=".6"/><rect x="25" y="20" width="12" height="7" rx="3" fill="#fff" fill-opacity=".6"/><rect x="11" y="25" width="12" height="12" rx="3" fill="#FBBF24"/><path d="M13.8 33.5 L16.6 30.2 L18.9 31.8 L22.2 27.3" stroke="#0A2A66" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="22.2" cy="27.3" r="1.4" fill="#0A2A66"/></svg>
         </div>
-        <h1>Olá, sou o <span class="grad">Luiz Antonio</span>.<br>Web Developer · CRMs, ERPs e SaaS multi-tenant em produção.</h1>
-        <p>Construo sistemas de gestão para negócios reais — do clássico PHP/MySQL a Next.js + Supabase. Código limpo, testes automatizados e deploos próprios.</p>
+        <h1>Construo sistemas que <span class="grad">funcionam em produção</span>.</h1>
+        <p>Web Developer focado em CRMs, ERPs e SaaS multi-tenant. Do PHP/MySQL clássico ao Next.js + TypeScript moderno — com testes automatizados, código limpo e entrega real.</p>
         <div class="hero-tags">
-            <span>PHP</span><span>JavaScript</span><span>TypeScript</span><span>Next.js</span><span>Tailwind</span><span>MySQL</span><span>Supabase</span><span>Appwrite</span><span>Vercel</span><span>WhatsApp API</span><span>SaaS</span>
+            <span>PHP</span><span>JavaScript</span><span>TypeScript</span><span>Next.js</span><span>React</span><span>Tailwind</span><span>MySQL</span><span>Supabase</span><span>Appwrite</span><span>Prisma</span><span>WhatsApp API</span><span>Docker</span>
         </div>
         <div class="hero-cta">
-            <a href="#projetos" class="btn btn-primary">Ver Projetos</a>
-            <a href="#contacto" class="btn btn-outline">Contactar</a>
+            <a href="#projetos" class="btn btn-primary">Ver projetos</a>
+            <a href="#contacto" class="btn btn-outline">Falar comigo</a>
         </div>
     </div>
-</div>
+</header>
 
 <div class="container">
-    <div class="metrics">
-        <div class="metric-card">
-            <div class="big">1.400+</div>
-            <div class="label">Testes automatizados</div>
-        </div>
-        <div class="metric-card">
-            <div class="big">71</div>
-            <div class="label">Rotas de API</div>
-        </div>
-        <div class="metric-card">
-            <div class="big">11+</div>
-            <div class="label">Projetos entregues</div>
-        </div>
-        <div class="metric-card">
-            <div class="big">2</div>
-            <div class="label">Mercados (PT / BR)</div>
-        </div>
+    <div class="metrics reveal">
+        <div class="metric"><div class="num" data-count="1400" data-suffix="+">0</div><div class="label">Testes automatizados</div><div class="sub">Vitest · Playwright · PHPUnit</div></div>
+        <div class="metric"><div class="num" data-count="71">0</div><div class="label">Rotas de API</div><div class="sub">VidaReal Platform</div></div>
+        <div class="metric"><div class="num" data-count="11" data-suffix="+">0</div><div class="label">Projetos entregues</div><div class="sub">SaaS, ERPs, sites e infra</div></div>
+        <div class="metric"><div class="num" data-count="2">0</div><div class="label">Mercados ativos</div><div class="sub">Portugal e Brasil</div></div>
     </div>
-
-    <section id="sobre">
-        <h2><span>👋</span> Sobre Mim</h2>
-        <p class="section-desc">Desenvolvedor web. Transformo processos manuais (Excel, papel, WhatsApp desorganizado) em sistemas de gestão completos que funcionam em produção — com testes, documentação e segurança.</p>
-        <div style="max-width:700px; margin:0 auto 3rem;">
-            <p><strong>O que construo:</strong> CRMs de telecomunicações, ERPs para restaurantes e fábricas, SaaS de faturação (IVA/NFS-e), plataformas de call center e apps de mobilidade urbana com rastreamento ao vivo.</p>
-            <p><strong>Como trabalho:</strong> back-end PHP/MySQL clássico (código leve, sem frameworks pesados) e stacks modernas Next.js + TypeScript + Tailwind + Supabase com row-level security. Testes automatizados em tudo o que vai para produção.</p>
-            <p><strong>Onde está o código:</strong> parte pública no GitHub; parte privada (clientes) disponível mediante pedido. Cada projeto neste portfólio tem número real — testes, linhas de código, versões e URLs quando estão ao vivo.</p>
-        </div>
-    </section>
-
-    <section id="projetos">
-        <h2><span>🚀</span> Projetos</h2>
-        <p class="section-desc">Agrupados por maturidade de entrega — de plataformas próprias em produção a código aberto e ferramentas de infraestrutura. Números verificados nos repositórios e deploos.</p>
-
-        <div class="filtros">
-            <button class="filtro active" data-filtro="todos">Todos</button>
-            <button class="filtro" data-filtor="plataformas">Plataformas &amp; SaaS</button>
-            <button class="filtro" data-filtor="clientes">ERPs para Clientes</button>
-            <button class="filtro" data-filtor="publicos">Produtos Públicos</button>
-            <button class="filtro" data-filtor="infra">Infra &amp; Ferramentas</button>
-        </div>
-
-        <div class="project-grid" id="gridProjetos">
-
-            <!-- ============ PLATAFORMAS & SAAS ============ -->
-            <article class="project-card reveal" data-nicho="plataformas">
-                <div class="project-img placeholder" style="background:linear-gradient(135deg,#0F3B8A 0%,#0A2A66 100%);">🏗️</div>
-                <span class="project-tag tag-priv">Privado · Produção</span>
-                <h3>VidaReal Platform <span class="project-tag tag-priv">Multi-tenant</span></h3>
-                <div class="subtitle">SaaS de gestão de negócios — um só sistema para múltiplos nichos com WhatsApp integrado e dashboards.</div>
-                <div class="tech"><span>Next.js 16</span><span>TypeScript</span><span>Tailwind 4</span><span>Prisma 7</span><span>TiDB Cloud</span><span>Evolution API</span><span>JWT/RBAC</span></div>
-                <p>Plataforma cloud-native multi-tenant. Cada empresa (tenant) tem dados isolados, módulos próprios e integrações WhatsApp. 71 modelos Prisma, 71 rotas de API, ~210k linhas de código e 1.466 testes passando.</p>
-                <div class="stats"><div class="stat"><b>71</b> modelos Prisma</div><div class="stat"><b>71</b> rotas API</div><div class="stat"><b>1.466</b> testes</div></div>
-                <div class="actions"><a href="https://github.com/lz-ntn/vidareal-platform" class="btn btn-outline" target="_blank" rel="noopener">Código</a><a href="mailto:los486@hotmail.com?subject=Acesso%20-%20VidaReal%20Platform" class="btn btn-primary">Pedir demo</a></div>
-                <span class="private-note">🔒 Repositório privado · acesso mediante pedido</span>
-            </article>
-
-            <article class="project-card reveal" data-nicho="plataformas">
-                <div class="project-img placeholder" style="background:linear-gradient(135deg,#0F766E 0%,#14B8A6 100%);">🚕</div>
-                <span class="project-tag tag-prod">🚀 Em produção</span>
-                <h3>UrbAia <span class="project-tag tag-pub">Alto Araguaia · MT</span></h3>
-                <div class="subtitle">App de transporte com rastreamento ao vivo, corrida agendada, tarifas dinâmicas e fluxo passageiro ↔ motorista ↔ central.</div>
-                <div class="tech"><span>Next.js 16</span><span>TypeScript</span><span>Tailwind</span><span>Supabase</span><span>Neon</span><span>Asaas PIX</span><span>PWA/TWA</span></div>
-                <p>App de mobilidade: pedido de corrida por GPS ou toque no mapa, tarifa calculada ao vivo, corrida agendada com janela de 15 min, acompanhamento em tempo real e painel do motorista com ganhos do dia. 424 testes passando.</p>
-                <div class="stats"><div class="stat"><b>424</b> testes</div><div class="stat"><b>3</b> fluxos (P/M/C)</div><div class="stat"><b>Ao vivo</b> na Vercel</div></div>
-                <div class="actions"><a href="https://aia-leva.vercel.app/site-publico/" class="btn btn-primary" target="_blank" rel="noopener">Ver site público</a><a href="https://github.com/losmanim/aia-leva" class="btn btn-outline" target="_blank" rel="noopener">Código</a></div>
-            </article>
-
-            <article class="project-card reveal" data-nicho="plataformas">
-                <div class="project-img" data-galeria='["assets/crm-dashboard.png","assets/crm-clientes.png","assets/crm-login.png"]'><img src="assets/crm-dashboard.png" alt="Dashboard PoupaPlus CRM" loading="lazy"></div>
-                <span class="project-tag tag-prod">🚀 Em produção</span>
-                <h3>CRM PoupaPlus <span class="project-tag tag-priv">Privado</span></h3>
-                <div class="subtitle">CRM de telecomunicações, energia e alarmes — 22 módulos, SPA moderna, PWA.</div>
-                <div class="tech"><span>Vanilla JS</span><span>Appwrite</span><span>Bootstrap 5</span><span>PWA</span><span>Vitest</span><span>Playwright</span></div>
-                <p>CRM completo para negócio real (PoupaPlus): leads, clientes, vendas, comissões e BI. Autenticação via server-side teams, logging estruturado, componentes reutilizáveis e 419 testes. Deploy no Render com CI/CD via GitHub Actions.</p>
-                <div class="stats"><div class="stat"><b>419</b> testes</div><div class="stat"><b>22</b> módulos</div><div class="stat"><b>50+</b> ficheiros JS</div></div>
-                <div class="actions"><a href="https://crm-poupaplus.onrender.com" class="btn btn-primary" target="_blank" rel="noopener">Ver demo</a><a href="https://github.com/losmanim/crm-poupaplus" class="btn btn-outline" target="_blank" rel="noopener">Código (público)</a></div>
-                <span class="private-note">🔒 Parte privada · acesso partilhado com clientes</span>
-            </article>
-
-            <article class="project-card reveal" data-nicho="plataformas">
-                <div class="project-img placeholder" style="background:linear-gradient(135deg,#1E40AF 0%,#3B82F6 100%);">🔧</div>
-                <span class="project-tag tag-prod">🚀 Demo funcional</span>
-                <h3>Zap - Gestão Oficina <span class="project-tag tag-pub">produto-base</span></h3>
-                <div class="subtitle">SaaS multi-empresa para oficinas: gestão de veículos, ordens de serviço, WhatsApp Business e faturação.</div>
-                <div class="tech"><span>PHP 8.2</span><span>MySQL/TiDB</span><span>Docker</span><span>Vanilla JS</span><span>Evolution API</span><span>Render</span></div>
-                <p>SaaS para oficinas mecânicas com gestão de clientes, veículos, ordens de serviço e integração WhatsApp via Evolution API. 167 testes passando (PHPUnit), deploy automático no Render via Blueprint e túnel Cloudflare para webhooks.</p>
-                <div class="stats"><div class="stat"><b>167</b> testes</div><div class="stat"><b>Multi-empresa</b> SaaS</div><div class="stat"><b>Ao vivo</b> na Render</div></div>
-                <div class="actions"><a href="https://produto-base-0ir3.onrender.com" class="btn btn-primary" target="_blank" rel="noopener">Ver demo</a><a href="https://github.com/losmanim/produto-base" class="btn btn-outline" target="_blank" rel="noopener">Código</a></div>
-            </article>
-
-            <!-- ============ ERPs PARA CLIENTES ============ -->
-            <article class="project-card reveal" data-nicho="clientes">
-                <div class="project-img placeholder" style="background:linear-gradient(135deg,#0F766E 0%,#14B8A6 100%);">🍽️</div>
-                <span class="project-tag tag-prod">🚀 Em produção</span>
-                <h3>ERP Micro-Restaurante Beira Rio <span class="project-tag tag-priv">Cliente · Brasil</span></h3>
-                <div class="subtitle">Cardápio, estoque, compras, financeiro e pedidos (comanda) com integração WhatsApp. Next.js 16 + Prisma + Supabase.</div>
-                <div class="tech"><span>Next.js 16</span><span>TypeScript</span><span>Tailwind</span><span>Prisma</span><span>Supabase</span><span>Evolution API</span><span>PWA</span></div>
-                <p>Sistema de gestão para micro e pequenos restaurantes. Cardápio digital, estoque, compras, financeiro e comandas com integração nativa WhatsApp. ~36,7k linhas de código, 71 rotas e deploy contínuo na Vercel.</p>
-                <div class="stats"><div class="stat"><b>36,7k</b> linhas</div><div class="stat"><b>71</b> rotas</div><div class="stat"><b>Ao vivo</b> na Vercel</div></div>
-                <div class="actions"><a href="https://erp-restaurante-beira-rio.vercel.app" class="btn btn-primary" target="_blank" rel="noopener">Abrir ERP</a><a href="https://github.com/losmanim/erp-restaurante-beira-rio" class="btn btn-outline" target="_blank" rel="noopener">Código</a></div>
-                <span class="private-note">🔒 Código privado · acesso partilhado com clientes</span>
-            </article>
-
-            <article class="project-card reveal" data-nicho="clientes">
-                <div class="project-img placeholder" style="background:linear-gradient(135deg,#0A2A66 0%,#1E40AF 100%);">🏠</div>
-                <span class="project-tag tag-prod">🚀 Em produção</span>
-                <h3>Site Restaurante Beira Rio <span class="project-tag tag-pub">beirarioaia.com.br</span></h3>
-                <div class="subtitle">Site institucional com cardápio digital interativo, galeria com lightbox, contato via WhatsApp, modo escuro/claro e SEO.</div>
-                <div class="tech"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Vercel</span><span>SEO</span><span>WhatsApp</span></div>
-                <p>Site institucional do Restaurante Beira Rio com cardápio digital consultivo (filtros e busca), galeria com lightbox, slider, modo escuro/claro e integração com WhatsApp. Hospedado na Vercel com Web Analytics.</p>
-                <div class="stats"><div class="stat"><b>Cardápio</b> digital</div><div class="stat"><b>Responsivo</b></div><div class="stat"><b>Ao vivo</b></div></div>
-                <div class="actions"><a href="https://beirarioaia.com.br" class="btn btn-primary" target="_blank" rel="noopener">Ver site</a></div>
-            </article>
-
-            <article class="project-card reveal" data-nicho="clientes">
-                <div class="project-img" data-galeria='["assets/gcc-dashboard.jpg","assets/gcc-gestao_call_center-landingPage.jpg","assets/gcc-gestao_call_center-pagLogin.jpg","assets/gcc-gestao_call_center-pagLogin0.jpg","assets/gcc-gestao_call_center-ferramVendas.jpg"]'><img src="assets/gcc-dashboard.jpg" alt="Dashboard GCC Call Center" loading="lazy"></div>
-                <span class="project-tag tag-prod">🚀 Em produção</span>
-                <h3>GCC Call Center <span class="project-tag tag-pub">Telecom · Portugal</span></h3>
-                <div class="subtitle">Plataforma de gestão para call center de telecomunicações (NOS, MEO, Vodafone): dashboard KPIs, CRUD clientes, contratos e leads.</div>
-                <div class="tech"><span>Vanilla JS</span><span>Appwrite</span><span>EmailJS</span><span>Netlify</span><span>CSV Export</span></div>
-                <p>Plataforma para call center de telecomunicações: dashboard com KPIs, CRUD de clientes, catálogo de planos 3P/4P, contratos, aprovações por email e leads. 7 módulos, deploy automático na Netlify.</p>
-                <div class="stats"><div class="stat"><b>7</b> módulos</div><div class="stat"><b>3</b> operadoras</div><div class="stat"><b>Auto</b> deploy</div></div>
-                <div class="actions"><a href="https://github.com/losmanim/gcc-call-center" class="btn btn-primary" target="_blank" rel="noopener">Ver repositório</a><a href="mailto:los486@hotmail.com?subject=Demo%20GCC%20Call%20Center" class="btn btn-outline">Pedir demo</a></div>
-            </article>
-
-            <!-- ============ PRODUTOS PÚBLICOS ============ -->
-            <article class="project-card reveal" data-nicho="publicos">
-                <div class="project-img placeholder" style="background:linear-gradient(135deg,#1E40AF 0%,#3B82F6 100%);">🧾</div>
-                <span class="project-tag tag-pub">🌐 Público</span>
-                <h3>FaturaFlow <span class="project-tag tag-pub">SaaS IVA</span></h3>
-                <div class="subtitle">SaaS de faturação para PMEs: autenticação, CRUD clientes, faturas com IVA, exportação PDF e dashboard de métricas.</div>
-                <div class="tech"><span>Next.js 16</span><span>TypeScript</span><span>Tailwind</span><span>Supabase RLS</span><span>Vercel</span></div>
-                <p>SaaS de faturação completo com segurança em row-level security (Supabase RLS). Autenticação, faturação com IVA, exportação em PDF e dashboard de métricas. Deploy na Vercel.</p>
-                <div class="stats"><div class="stat"><b>RLS</b> Segurança</div><div class="stat"><b>PDF</b> Exportação</div><div class="stat"><b>Ao vivo</b> na Vercel</div></div>
-                <div class="actions"><a href="https://faturaflow-gilt.vercel.app" class="btn btn-primary" target="_blank" rel="noopener">Ver demo</a><a href="https://github.com/losmanim/faturaflow" class="btn btn-outline" target="_blank" rel="noopener">Código</a></div>
-            </article>
-
-            <article class="project-card reveal" data-nicho="publicos">
-                <div class="project-img placeholder" style="background:linear-gradient(135deg,#0F766E 0%,#14B8A6 100%);">🧾</div>
-                <span class="project-tag tag-pub">🌐 Público</span>
-                <h3>FaturaFlow BR <span class="project-tag tag-pub">NFS-e MEI</span></h3>
-                <div class="subtitle">Emissor de Nota Fiscal de Serviços Eletrônica (NFS-e) para MEI e prestadores do Simples Nacional — adaptador fiscal mock ou Focus NFe.</div>
-                <div class="tech"><span>Next.js</span><span>TypeScript</span><span>Tailwind</span><span>Supabase</span><span>Focus NFe</span></div>
-                <p>Emissor de NFS-e para MEI e prestadores de serviço no Simples Nacional. Adaptador fiscal em modo mock ou integração real via Focus NFe. Deploy na Vercel.</p>
-                <div class="stats"><div class="stat"><b>NFS-e</b> Brasil</div><div class="stat"><b>MEI</b> Simples</div><div class="stat"><b>Ao vivo</b> na Vercel</div></div>
-                <div class="actions"><a href="https://faturaflow-br.vercel.app" class="btn btn-primary" target="_blank" rel="noopener">Ver demo</a><a href="https://github.com/losmanim/faturaflow-br" class="btn btn-outline" target="_blank" rel="noopener">Código</a></div>
-            </article>
-
-            <article class="project-card reveal" data-nicho="publicos">
-                <div class="project-img placeholder" style="background:linear-gradient(135deg,#00D4FF 0%,#0A2A66 100%);">💎</div>
-                <span class="project-tag tag-pub">🌐 Público</span>
-                <h3>KELYVEX <span class="project-tag tag-pub">Portal PHP</span></h3>
-                <div class="subtitle">Portal multipáginas PHP com sistema de rotas, 6 páginas de soluções, chatbot e deploy serverless na Vercel.</div>
-                <div class="tech"><span>PHP 8.4</span><span>Vercel serverless</span><span>HTML/CSS</span><span>JavaScript</span><span>Manrope</span></div>
-                <p>Portal institucional multipáginas com router PHP, rotas de soluções (business systems, sales operations, automação, integrações, IA), chatbot Joemma e deploy serverless na Vercel.</p>
-                <div class="stats"><div class="stat"><b>PHP 8.4</b></div><div class="stat"><b>6</b> soluções</div><div class="stat"><b>Ao vivo</b> na Vercel</div></div>
-                <div class="actions"><a href="https://kelyvex.vercel.app" class="btn btn-primary" target="_blank" rel="noopener">Ver site</a><a href="https://github.com/losmanim/kelyvex" class="btn btn-outline" target="_blank" rel="noopener">Código</a></div>
-            </article>
-
-            <article class="project-card reveal" data-nicho="publicos">
-                <div class="project-img placeholder" style="background:linear-gradient(135deg,#7C3AED 0%,#4F46E5 100%);">📜</div>
-                <span class="project-tag tag-pub">🌐 Público</span>
-                <h3>Brasil Originário <span class="project-tag tag-pub">Dossiê histórico</span></h3>
-                <div class="subtitle">Site estático, sem dependências, com fontes verificáveis sobre a invasão de 1500 e o genocídio dos povos originários do Brasil.</div>
-                <div class="tech"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Sem dependências</span></div>
-                <p>Dossiê com fontes verificáveis sobre a invasão de 1500 e o genocídio dos povos originários. Linha do tempo, dossiê, povos e línguas, mitos refutados. 7 páginas, ~5,8MB de conteúdo documentado.</p>
-                <div class="stats"><div class="stat"><b>7</b> páginas</div><div class="stat"><b>Zero</b> dependências</div><div class="stat"><b>Fontes</b> verificáveis</div></div>
-                <div class="actions"><a href="https://github.com/lz-ntn/brasil-originario" class="btn btn-primary" target="_blank" rel="noopener">Ver repositório</a></div>
-            </article>
-
-            <!-- ============ INFRA & FERRAMENTAS ============ -->
-            <article class="project-card reveal" data-nicho="infra">
-                <div class="project-img placeholder" style="background:linear-gradient(135deg,#25D366 0%,#128C7E 100%);">💬</div>
-                <span class="project-tag tag-priv">Infra própria</span>
-                <h3>Evolution API <span class="project-tag tag-priv">Gateway WhatsApp</span></h3>
-                <div class="subtitle">Gateway WhatsApp (Baileys) em Docker para integração com sistemas próprios — Evolution API no ar na porta 8080.</div>
-                <div class="tech"><span>Node 20</span><span>TypeScript</span><span>Baileys</span><span>Docker</span><span>REST API</span></div>
-                <p>Instância da Evolution API (clone upstream) a funcionar localmente e via túnel Cloudflare, servindo de gateway WhatsApp para os projetos do ecossistema vidaReal (Zap Oficina, VidaReal Platform, etc.).</p>
-                <div class="stats"><div class="stat"><b>Baileys</b> WhatsApp</div><div class="stat"><b>Docker</b> Container</div><div class="stat"><b>8080</b> Porta reservada</div></div>
-                <div class="actions"><a href="https://evolution.beirarioaia.com.br" class="btn btn-primary" target="_blank" rel="noopener">Ver instância</a></div>
-            </article>
-
-            <article class="project-card reveal" data-nicho="infra">
-                <div class="project-img placeholder" style="background:linear-gradient(135deg,#6366F1 0%,#4F46E5 100%);">⚙️</div>
-                <span class="project-tag tag-priv">Infra própria</span>
-                <h3>OPS Dashboard <span class="project-tag tag-pub">vidaReal</span></h3>
-                <div class="subtitle">Painel de controlo centralizado para monitorização de projetos, infraestrutura e serviços — Vite + TypeScript + API Express.</div>
-                <div class="tech"><span>Vite</span><span>TypeScript</span><span>Express</span><span>Docker</span><span>SSE</span><span>Cloudflare</span></div>
-                <p>Painel de operações da vidaReal: monitorização em tempo real, deploy automático, gestão de instâncias WhatsApp e integração com o gestor.sh para controlo de sistemas sem depender da CLI.</p>
-                <div class="stats"><div class="stat"><b>SSE</b> Tempo real</div><div class="stat"><b>Docker</b> Infra</div><div class="stat"><b>Local</b> container</div></div>
-                <div class="actions"><a href="https://github.com/losmanim/ops-dashboard" class="btn btn-primary" target="_blank" rel="noopener">Ver repositório</a></div>
-            </article>
-
-            <article class="project-card reveal" data-nicho="infra">
-                <div class="project-img placeholder" style="background:linear-gradient(135deg,#7C3AED 0%,#4F46E5 100%);">🧘</div>
-                <span class="project-tag tag-pub">🌐 Público</span>
-                <h3>Sabedoria de Coração <span class="project-tag tag-pub">6 sites + API</span></h3>
-                <div class="subtitle">3 apps educacionais + portal colaborativo (Render, Docker, TiDB) — aprender, viver, meditação, portal, cristianismo e curso.</div>
-                <div class="tech"><span>PHP</span><span>MySQL/TiDB</span><span>Docker</span><span>Render</span><span>Local:8081-8083</span></div>
-                <p>Ecossistema de saberes ancestrais com 6 static sites no Render + web service Docker (caminho-saberes) e MySQL/TiDB. Gerido pelo gestor.sh com healthcheck e monitorização de portas.</p>
-                <div class="stats"><div class="stat"><b>6</b> sites Render</div><div class="stat"><b>TiDB</b> Banco</div><div class="stat"><b>Ao vivo</b> na Render</div></div>
-                <div class="actions"><a href="https://saberes-de-coracao.onrender.com" class="btn btn-primary" target="_blank" rel="noopener">Ver site</a></div>
-            </article>
-
-        </div>
-    </section>
-
-    <section id="skills">
-        <h2><span>🛠️</span> Competências Técnicas</h2>
-        <p class="section-desc">Stack com que trabalho diariamente, do back-end clássico ao front-end moderno e à infraestrutura própria.</p>
-        <div class="feature-grid">
-            <div class="feature-card reveal">
-                <span class="icon">⚙️</span>
-                <h4>Back-end & Dados</h4>
-                <p>PHP 7+/8+, MySQL, PDO, SQL, Node.js, Supabase (RLS), Appwrite (BaaS), APIs REST, Prisma ORM, TiDB Cloud</p>
-            </div>
-            <div class="feature-card reveal">
-                <span class="icon">🎨</span>
-                <h4>Front-end</h4>
-                <p>JavaScript, TypeScript, React, Next.js 16, Tailwind CSS 4, Bootstrap 5, HTML5, CSS3, PWA, App Router</p>
-            </div>
-            <div class="feature-card reveal">
-                <span class="icon">📱</span>
-                <h4>Mobile & WhatsApp</h4>
-                <p>Evolution API, Baileys, WhatsApp Business, PWA/TWA, APIs REST, webhooks, pairing codes</p>
-            </div>
-            <div class="feature-card reveal">
-                <span class="icon">🚀</span>
-                <h4>Cloud & Deploy</h4>
-                <p>Vercel (Next.js, serverless), Render, GitHub Pages, Netlify, Docker, Cloudflare túneis, Serverless Functions</p>
-            </div>
-            <div class="feature-card reveal">
-                <span class="icon">🧪</span>
-                <h4>Testes & Qualidade</h4>
-                <p>Vitest, Playwright, PHPUnit, testes unitários + E2E, jsdom, mocks, cobertura de código, CI/CD</p>
-            </div>
-            <div class="feature-card reveal">
-                <span class="icon">🔒</span>
-                <h4>Segurança</h4>
-                <p>PDO Prepared Statements, bcrypt, Supabase RLS, RBAC, rate limiting, autenticação server-side, JWT, CSP, HSTS</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="servicos">
-        <h2><span>💼</span> Serviços Freelancer</h2>
-        <p class="section-desc">Soluções web para pequenas e médias empresas.</p>
-        <div class="feature-grid">
-            <div class="feature-card reveal">
-                <span class="icon">🏢</span>
-                <h4>CRM / ERP à Medida</h4>
-                <p>Sistemas de gestão completos: clientes, vendas, estoque, financeiro, produção, comanda.</p>
-            </div>
-            <div class="feature-card reveal">
-                <span class="icon">🌐</span>
-                <h4>Sites & Landing Pages</h4>
-                <p>Sites profissionais com captura de leads, formulários inteligentes, SEO e blog.</p>
-            </div>
-            <div class="feature-card reveal">
-                <span class="icon">💬</span>
-                <h4>Integração WhatsApp</h4>
-                <p>Automação de atendimento, chatbots, envio de mídia, webhooks e gateway próprio via Evolution API.</p>
-            </div>
-            <div class="feature-card reveal">
-                <span class="icon">🔄</span>
-                <h4>Automação de Processos</h4>
-                <p>Substituir Excel e papel por sistemas web com relatórios, rastreabilidade e dashboards.</p>
-            </div>
-            <div class="feature-card reveal">
-                <span class="icon">🔧</span>
-                <h4>Manutenção & Melhorias</h4>
-                <p>Manutenção de sistemas existentes, novas funcionalidades, refatoração de código legado.</p>
-            </div>
-            <div class="feature-card reveal">
-                <span class="icon">🧪</span>
-                <h4>Testes Automatizados</h4>
-                <p>Implantação de vitest, playwright e PHPUnit para garantir qualidade em produção.</p>
-            </div>
-        </div>
-    </section>
-
 </div>
 
-    <div class="contact" id="contacto">
-        <div class="container">
-            <h2>Vamos Trabalhar Juntos</h2>
-            <p>Disponível para projetos remotos nacionais e internacionais</p>
-            <a href="mailto:los486@hotmail.com" class="btn btn-white">los486@hotmail.com</a>
-            <a href="https://www.linkedin.com/in/luiz-antonio-de-oliveira-silva-84945197" class="btn btn-outline-white">LinkedIn</a>
-            <a href="https://github.com/losmanim" class="btn btn-outline-white">GitHub</a>
+<section id="sobre">
+    <div class="container">
+        <div class="section-head reveal">
+            <div class="section-kicker">Sobre mim</div>
+            <h2>Do problema ao produto em produção.</h2>
+            <p>Transformo processos manuais — planilhas, papel, WhatsApp desorganizado — em sistemas de gestão que as pessoas realmente usam no dia a dia.</p>
+        </div>
+        <div class="about-grid">
+            <div class="about-text reveal">
+                <p><strong>O que construo:</strong> CRMs de telecomunicações, ERPs para restaurantes e fábricas, SaaS de faturação (IVA/NFS-e), plataformas de call center e apps de mobilidade urbana com rastreamento ao vivo.</p>
+                <p><strong>Como trabalho:</strong> combino back-end sólido (PHP/MySQL, APIs REST, segurança com PDO/bcrypt/RLS) com front-ends modernos (Next.js, React, TypeScript, Tailwind). Cada entrega vai com testes automatizados e documentação.</p>
+                <p><strong>O que me diferencia:</strong> não entrego só código — entrego produto. Penso no fluxo do utilizador, na segurança dos dados, na manutenção e no deploy. Parte do meu trabalho é público no GitHub; projetos de clientes estão disponíveis mediante pedido.</p>
+            </div>
+            <div class="about-highlights reveal">
+                <div class="highlight">
+                    <div class="icon">🏗️</div>
+                    <div><h4>Arquitetura completa</h4><p>Do modelo de dados ao deploy — multi-tenant, RBAC, integrações e CI/CD.</p></div>
+                </div>
+                <div class="highlight">
+                    <div class="icon">🧪</div>
+                    <div><h4>Qualidade mensurável</h4><p>1.400+ testes automatizados em projetos reais. Regressão não passa.</p></div>
+                </div>
+                <div class="highlight">
+                    <div class="icon">⚡</div>
+                    <div><h4>Entrega em produção</h4><p>Sistemas rodando em negócios reais — Vercel, Render, Docker, HostGator.</p></div>
+                </div>
+                <div class="highlight">
+                    <div class="icon">🔗</div>
+                    <div><h4>Integrações que importam</h4><p>WhatsApp (Evolution API), pagamentos (Asaas), Supabase, Appwrite e APIs REST.</p></div>
+                </div>
+            </div>
         </div>
     </div>
+</section>
 
-    <div class="footer">
-        <p>&copy; 2026 Luiz Antonio · Web Developer</p>
-        <p><a href="https://github.com/losmanim" target="_blank" rel="noopener">GitHub</a> · <a href="https://www.linkedin.com/in/luiz-antonio-de-oliveira-silva-84945197" target="_blank" rel="noopener">LinkedIn</a> · <a href="mailto:los486@hotmail.com">Email</a></p>
+<section id="projetos">
+    <div class="container">
+        <div class="section-head reveal">
+            <div class="section-kicker">Portfólio</div>
+            <h2>Projetos reais, números reais.</h2>
+            <p>De plataformas SaaS multi-tenant a ERPs em produção, produtos públicos e infraestrutura própria. Cada card traz o que foi construído, a stack e a evidência.</p>
+        </div>
+
+        <div class="filters reveal">
+            <button class="filter active" data-filter="todos">Todos</button>
+            <button class="filter" data-filter="plataformas">Plataformas &amp; SaaS</button>
+            <button class="filter" data-filter="clientes">ERPs para Clientes</button>
+            <button class="filter" data-filter="publicos">Produtos Públicos</button>
+            <button class="filter" data-filter="infra">Infra &amp; Ferramentas</button>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+
+            <article class="project reveal" data-cat="plataformas">
+                <div class="project-media">
+                    <img src="assets/projects/vlrreal.jpg" alt="VidaReal Platform" loading="lazy">
+                    <div class="overlay"></div>
+                    <span class="project-cat">SaaS · Multi-tenant</span>
+                </div>
+                <div class="project-body">
+                    <h3>VidaReal Platform</h3>
+                    <p class="subtitle">Plataforma de gestão para múltiplos nichos — restaurantes, construção, serviços — com WhatsApp integrado e dashboards.</p>
+                    <div class="tech"><span>Next.js 16</span><span>TypeScript</span><span>Tailwind 4</span><span>Prisma 7</span><span>TiDB</span><span>Evolution API</span><span>JWT/RBAC</span></div>
+                    <div class="project-stats">
+                        <div class="stat"><b>71</b>modelos</div>
+                        <div class="stat"><b>71</b>rotas API</div>
+                        <div class="stat"><b>1.466</b>testes</div>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://github.com/lz-ntn/vidareal-platform" class="btn btn-outline" target="_blank" rel="noopener">Código</a>
+                        <a href="mailto:los486@hotmail.com?subject=Acesso%20-%20VidaReal%20Platform" class="btn btn-primary">Pedir demo</a>
+                    </div>
+                    <span class="private-note">🔒 Repositório privado · acesso mediante pedido</span>
+                </div>
+            </article>
+
+            <article class="project reveal" data-cat="plataformas">
+                <div class="project-media">
+                    <img src="assets/projects/urbaia-app.jpeg" alt="UrbAia - app de mobilidade" loading="lazy">
+                    <div class="overlay"></div>
+                    <span class="project-cat">Mobilidade urbana</span>
+                </div>
+                <div class="project-body">
+                    <h3>UrbAia</h3>
+                    <p class="subtitle">App de transporte com rastreamento ao vivo, corrida agendada, tarifas dinâmicas e fluxo passageiro ↔ motorista ↔ central.</p>
+                    <div class="tech"><span>Next.js 16</span><span>TypeScript</span><span>Supabase</span><span>Neon</span><span>Asaas PIX</span><span>PWA/TWA</span></div>
+                    <div class="project-stats">
+                        <div class="stat"><b>424</b>testes</div>
+                        <div class="stat"><b>3</b>fluxos</div>
+                        <div class="stat"><b>Ao vivo</b>Vercel</div>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://aia-leva.vercel.app/site-publico/" class="btn btn-primary" target="_blank" rel="noopener">Ver site</a>
+                        <a href="https://github.com/losmanim/aia-leva" class="btn btn-outline" target="_blank" rel="noopener">Código</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project reveal" data-cat="plataformas" data-gallery='["assets/crm-dashboard.png","assets/crm-clientes.png","assets/crm-login.png"]'>
+                <div class="project-media">
+                    <img src="assets/crm-dashboard.png" alt="CRM PoupaPlus dashboard" loading="lazy">
+                    <div class="overlay"></div>
+                    <span class="project-cat">CRM · Telecom</span>
+                </div>
+                <div class="project-body">
+                    <h3>CRM PoupaPlus</h3>
+                    <p class="subtitle">CRM de telecomunicações, energia e alarmes — 22 módulos, SPA moderna, PWA e operação real.</p>
+                    <div class="tech"><span>Vanilla JS</span><span>Appwrite</span><span>Bootstrap 5</span><span>PWA</span><span>Vitest</span><span>Playwright</span></div>
+                    <div class="project-stats">
+                        <div class="stat"><b>419</b>testes</div>
+                        <div class="stat"><b>22</b>módulos</div>
+                        <div class="stat"><b>50+</b>ficheiros JS</div>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://crm-poupaplus.onrender.com" class="btn btn-primary" target="_blank" rel="noopener">Ver demo</a>
+                        <a href="https://github.com/losmanim/crm-poupaplus" class="btn btn-outline" target="_blank" rel="noopener">Código</a>
+                    </div>
+                    <span class="private-note">🔒 Parte privada · acesso partilhado com clientes</span>
+                </div>
+            </article>
+
+            <article class="project reveal" data-cat="plataformas">
+                <div class="project-media">
+                    <img src="assets/projects/zap-oficina-preview.webp" alt="Zap Gestão Oficina" loading="lazy">
+                    <div class="overlay"></div>
+                    <span class="project-cat">SaaS · Oficinas</span>
+                </div>
+                <div class="project-body">
+                    <h3>Zap - Gestão Oficina</h3>
+                    <p class="subtitle">SaaS multi-empresa para oficinas: clientes, veículos, ordens de serviço, WhatsApp Business e faturação.</p>
+                    <div class="tech"><span>PHP 8.2</span><span>MySQL/TiDB</span><span>Docker</span><span>Evolution API</span><span>Render</span></div>
+                    <div class="project-stats">
+                        <div class="stat"><b>167</b>testes</div>
+                        <div class="stat"><b>Multi</b>empresa</div>
+                        <div class="stat"><b>Ao vivo</b>Render</div>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://produto-base-0ir3.onrender.com" class="btn btn-primary" target="_blank" rel="noopener">Ver demo</a>
+                        <a href="https://github.com/losmanim/produto-base" class="btn btn-outline" target="_blank" rel="noopener">Código</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project reveal" data-cat="clientes">
+                <div class="project-media">
+                    <img src="assets/projects/erp-beirario.svg" alt="ERP Micro-Restaurante Beira Rio" loading="lazy">
+                    <div class="overlay"></div>
+                    <span class="project-cat">ERP · Restauração</span>
+                </div>
+                <div class="project-body">
+                    <h3>ERP Micro-Restaurante Beira Rio</h3>
+                    <p class="subtitle">Cardápio, estoque, compras, financeiro e comandas com integração WhatsApp. Deploy contínuo na Vercel.</p>
+                    <div class="tech"><span>Next.js 16</span><span>TypeScript</span><span>Prisma</span><span>Supabase</span><span>Evolution API</span><span>PWA</span></div>
+                    <div class="project-stats">
+                        <div class="stat"><b>36,7k</b>linhas</div>
+                        <div class="stat"><b>71</b>rotas</div>
+                        <div class="stat"><b>Ao vivo</b>Vercel</div>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://erp-restaurante-beira-rio.vercel.app" class="btn btn-primary" target="_blank" rel="noopener">Abrir ERP</a>
+                        <a href="https://github.com/losmanim/erp-restaurante-beira-rio" class="btn btn-outline" target="_blank" rel="noopener">Código</a>
+                    </div>
+                    <span class="private-note">🔒 Código privado · acesso partilhado com clientes</span>
+                </div>
+            </article>
+
+            <article class="project reveal" data-cat="clientes">
+                <div class="project-media">
+                    <img src="assets/projects/beirario-capa.webp" alt="Site Restaurante Beira Rio" loading="lazy">
+                    <div class="overlay"></div>
+                    <span class="project-cat">Site · Restauração</span>
+                </div>
+                <div class="project-body">
+                    <h3>Site Restaurante Beira Rio</h3>
+                    <p class="subtitle">Site institucional com cardápio digital interativo, galeria com lightbox, contato via WhatsApp e SEO.</p>
+                    <div class="tech"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Vercel</span><span>SEO</span><span>WhatsApp</span></div>
+                    <div class="project-stats">
+                        <div class="stat"><b>Cardápio</b>digital</div>
+                        <div class="stat"><b>Responsivo</b>mobile</div>
+                        <div class="stat"><b>Ao vivo</b>produção</div>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://beirarioaia.com.br" class="btn btn-primary" target="_blank" rel="noopener">Ver site</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project reveal" data-cat="clientes" data-gallery='["assets/gcc-dashboard.jpg","assets/gcc-gestao_call_center-landingPage.jpg","assets/gcc-gestao_call_center-pagLogin.jpg","assets/gcc-gestao_call_center-pagLogin0.jpg","assets/gcc-gestao_call_center-ferramVendas.jpg"]'>
+                <div class="project-media">
+                    <img src="assets/gcc-dashboard.jpg" alt="GCC Call Center dashboard" loading="lazy">
+                    <div class="overlay"></div>
+                    <span class="project-cat">Call Center · Telecom</span>
+                </div>
+                <div class="project-body">
+                    <h3>GCC Call Center</h3>
+                    <p class="subtitle">Plataforma de gestão para call center (NOS, MEO, Vodafone): KPIs, CRUD clientes, contratos e leads.</p>
+                    <div class="tech"><span>Vanilla JS</span><span>Appwrite</span><span>EmailJS</span><span>Netlify</span><span>CSV Export</span></div>
+                    <div class="project-stats">
+                        <div class="stat"><b>7</b>módulos</div>
+                        <div class="stat"><b>3</b>operadoras</div>
+                        <div class="stat"><b>Auto</b>deploy</div>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://github.com/losmanim/gcc-call-center" class="btn btn-primary" target="_blank" rel="noopener">Repositório</a>
+                        <a href="mailto:los486@hotmail.com?subject=Demo%20GCC%20Call%20Center" class="btn btn-outline">Pedir demo</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project reveal" data-cat="publicos">
+                <div class="project-media">
+                    <img src="assets/projects/faturaflow.svg" alt="FaturaFlow" loading="lazy">
+                    <div class="overlay"></div>
+                    <span class="project-cat">SaaS · Faturação</span>
+                </div>
+                <div class="project-body">
+                    <h3>FaturaFlow</h3>
+                    <p class="subtitle">SaaS de faturação para PMEs: clientes, faturas com IVA, exportação PDF e dashboard de métricas.</p>
+                    <div class="tech"><span>Next.js 16</span><span>TypeScript</span><span>Tailwind</span><span>Supabase RLS</span><span>Vercel</span></div>
+                    <div class="project-stats">
+                        <div class="stat"><b>RLS</b>segurança</div>
+                        <div class="stat"><b>PDF</b>exportação</div>
+                        <div class="stat"><b>Ao vivo</b>Vercel</div>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://faturaflow-gilt.vercel.app" class="btn btn-primary" target="_blank" rel="noopener">Ver demo</a>
+                        <a href="https://github.com/losmanim/faturaflow" class="btn btn-outline" target="_blank" rel="noopener">Código</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project reveal" data-cat="publicos">
+                <div class="project-media">
+                    <img src="assets/projects/faturaflow-br.svg" alt="FaturaFlow BR" loading="lazy">
+                    <div class="overlay"></div>
+                    <span class="project-cat">Faturação · Brasil</span>
+                </div>
+                <div class="project-body">
+                    <h3>FaturaFlow BR</h3>
+                    <p class="subtitle">Emissor de NFS-e para MEI e prestadores do Simples Nacional — adaptador fiscal mock ou Focus NFe.</p>
+                    <div class="tech"><span>Next.js</span><span>TypeScript</span><span>Tailwind</span><span>Supabase</span><span>Focus NFe</span></div>
+                    <div class="project-stats">
+                        <div class="stat"><b>NFS-e</b>Brasil</div>
+                        <div class="stat"><b>MEI</b>Simples</div>
+                        <div class="stat"><b>Ao vivo</b>Vercel</div>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://faturaflow-br.vercel.app" class="btn btn-primary" target="_blank" rel="noopener">Ver demo</a>
+                        <a href="https://github.com/losmanim/faturaflow-br" class="btn btn-outline" target="_blank" rel="noopener">Código</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project reveal" data-cat="publicos">
+                <div class="project-media">
+                    <img src="assets/projects/kelyvex.svg" alt="KELYVEX" loading="lazy">
+                    <div class="overlay"></div>
+                    <span class="project-cat">Portal institucional</span>
+                </div>
+                <div class="project-body">
+                    <h3>KELYVEX</h3>
+                    <p class="subtitle">Portal multipáginas PHP com sistema de rotas, 6 páginas de soluções, chatbot e deploy serverless na Vercel.</p>
+                    <div class="tech"><span>PHP 8.4</span><span>Vercel serverless</span><span>HTML/CSS</span><span>JavaScript</span></div>
+                    <div class="project-stats">
+                        <div class="stat"><b>PHP 8.4</b>runtime</div>
+                        <div class="stat"><b>6</b>soluções</div>
+                        <div class="stat"><b>Ao vivo</b>Vercel</div>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://kelyvex.vercel.app" class="btn btn-primary" target="_blank" rel="noopener">Ver site</a>
+                        <a href="https://github.com/losmanim/kelyvex" class="btn btn-outline" target="_blank" rel="noopener">Código</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project reveal" data-cat="publicos">
+                <div class="project-media">
+                    <img src="assets/projects/brasil-originario-preview.webp" alt="Brasil Originário" loading="lazy">
+                    <div class="overlay"></div>
+                    <span class="project-cat">Educação · Memória</span>
+                </div>
+                <div class="project-body">
+                    <h3>Brasil Originário</h3>
+                    <p class="subtitle">Dossiê histórico com fontes verificáveis sobre a invasão de 1500 e o genocídio dos povos originários do Brasil.</p>
+                    <div class="tech"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Zero dependências</span></div>
+                    <div class="project-stats">
+                        <div class="stat"><b>7</b>páginas</div>
+                        <div class="stat"><b>25+</b>imagens</div>
+                        <div class="stat"><b>Fontes</b>verificáveis</div>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://github.com/lz-ntn/brasil-originario" class="btn btn-primary" target="_blank" rel="noopener">Repositório</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project reveal" data-cat="infra">
+                <div class="project-media">
+                    <img src="assets/projects/evolution.svg" alt="Evolution API" loading="lazy">
+                    <div class="overlay"></div>
+                    <span class="project-cat">Infra · WhatsApp</span>
+                </div>
+                <div class="project-body">
+                    <h3>Evolution API</h3>
+                    <p class="subtitle">Gateway WhatsApp (Baileys) em Docker, servindo como integração de mensagens para os projetos do ecossistema.</p>
+                    <div class="tech"><span>Node 20</span><span>TypeScript</span><span>Baileys</span><span>Docker</span><span>REST API</span></div>
+                    <div class="project-stats">
+                        <div class="stat"><b>Docker</b>container</div>
+                        <div class="stat"><b>8080</b>porta</div>
+                        <div class="stat"><b>Ao vivo</b>túnel CF</div>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://evolution.beirarioaia.com.br" class="btn btn-primary" target="_blank" rel="noopener">Ver instância</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project reveal" data-cat="infra">
+                <div class="project-media">
+                    <img src="assets/projects/ops.svg" alt="OPS Dashboard" loading="lazy">
+                    <div class="overlay"></div>
+                    <span class="project-cat">Infra · Operações</span>
+                </div>
+                <div class="project-body">
+                    <h3>OPS Dashboard</h3>
+                    <p class="subtitle">Painel centralizado para monitorização de projetos, infraestrutura e serviços — com SSE em tempo real.</p>
+                    <div class="tech"><span>Vite</span><span>TypeScript</span><span>Express</span><span>Docker</span><span>SSE</span></div>
+                    <div class="project-stats">
+                        <div class="stat"><b>SSE</b>tempo real</div>
+                        <div class="stat"><b>Docker</b>infra</div>
+                        <div class="stat"><b>Local</b>container</div>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://github.com/losmanim/ops-dashboard" class="btn btn-primary" target="_blank" rel="noopener">Repositório</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project reveal" data-cat="infra">
+                <div class="project-media">
+                    <img src="assets/projects/saberes-preview.webp" alt="Sabedoria de Coração" loading="lazy">
+                    <div class="overlay"></div>
+                    <span class="project-cat">Educação · Plataforma</span>
+                </div>
+                <div class="project-body">
+                    <h3>Sabedoria de Coração</h3>
+                    <p class="subtitle">Ecossistema de saberes com 6 sites no Render + web service Docker e MySQL/TiDB, gerido por healthcheck.</p>
+                    <div class="tech"><span>PHP</span><span>MySQL/TiDB</span><span>Docker</span><span>Render</span></div>
+                    <div class="project-stats">
+                        <div class="stat"><b>6</b>sites</div>
+                        <div class="stat"><b>TiDB</b>banco</div>
+                        <div class="stat"><b>Ao vivo</b>Render</div>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://saberes-de-coracao.onrender.com" class="btn btn-primary" target="_blank" rel="noopener">Ver site</a>
+                    </div>
+                </div>
+            </article>
+
+        </div>
     </div>
+</section>
 
-    <div class="lightbox" id="lightbox" role="dialog" aria-label="Visualização da imagem">
-        <button class="lightbox-close" id="lightboxClose" aria-label="Fechar">&times;</button>
-        <button class="lightbox-nav prev" id="lightboxPrev" aria-label="Anterior">&#10094;</button>
-        <img id="lightboxImg" src="" alt="">
-        <button class="lightbox-nav next" id="lightboxNext" aria-label="Próxima">&#10095;</button>
-        <div class="lightbox-counter" id="lightboxCounter"></div>
+<section id="skills">
+    <div class="container">
+        <div class="section-head reveal">
+            <div class="section-kicker">Competências</div>
+            <h2>Stack completa, do back-end ao deploy.</h2>
+            <p>Ferramentas que uso diariamente para construir, testar e colocar sistemas em produção.</p>
+        </div>
+        <div class="feature-grid">
+            <div class="feature reveal"><span class="icon">⚙️</span><h4>Back-end & Dados</h4><p>PHP 7+/8+, MySQL, PDO, SQL, Node.js, Supabase (RLS), Appwrite, APIs REST, Prisma ORM, TiDB Cloud.</p></div>
+            <div class="feature reveal"><span class="icon">🎨</span><h4>Front-end</h4><p>JavaScript, TypeScript, React, Next.js 16, Tailwind CSS 4, Bootstrap 5, HTML5, CSS3, PWA, App Router.</p></div>
+            <div class="feature reveal"><span class="icon">📱</span><h4>Mobile & WhatsApp</h4><p>Evolution API, Baileys, WhatsApp Business, PWA/TWA, webhooks, pairing codes e automações.</p></div>
+            <div class="feature reveal"><span class="icon">🚀</span><h4>Cloud & Deploy</h4><p>Vercel, Render, GitHub Pages, Netlify, Docker, Cloudflare túneis e Serverless Functions.</p></div>
+            <div class="feature reveal"><span class="icon">🧪</span><h4>Testes & Qualidade</h4><p>Vitest, Playwright, PHPUnit, testes unitários + E2E, mocks, cobertura e CI/CD.</p></div>
+            <div class="feature reveal"><span class="icon">🔒</span><h4>Segurança</h4><p>PDO Prepared Statements, bcrypt, Supabase RLS, RBAC, rate limiting, JWT, CSP e HSTS.</p></div>
+        </div>
     </div>
+</section>
 
-    <script>
-    (function () {
-        var navToggle = document.getElementById("navToggle");
-        var navLinks = document.getElementById("navLinks");
-        navToggle.addEventListener("click", function () {
-            navLinks.classList.toggle("open");
+<section id="servicos">
+    <div class="container">
+        <div class="section-head reveal">
+            <div class="section-kicker">Serviços</div>
+            <h2>Como posso ajudar o seu negócio.</h2>
+            <p>Soluções web para pequenas e médias empresas — do MVP ao sistema em produção.</p>
+        </div>
+        <div class="feature-grid">
+            <div class="feature reveal"><span class="icon">🏢</span><h4>CRM / ERP à Medida</h4><p>Sistemas de gestão completos: clientes, vendas, estoque, financeiro, produção e comanda.</p></div>
+            <div class="feature reveal"><span class="icon">🌐</span><h4>Sites & Landing Pages</h4><p>Sites profissionais com captura de leads, formulários inteligentes, SEO e performance.</p></div>
+            <div class="feature reveal"><span class="icon">💬</span><h4>Integração WhatsApp</h4><p>Automação de atendimento, chatbots, envio de mídia, webhooks e gateway próprio via Evolution API.</p></div>
+            <div class="feature reveal"><span class="icon">🔄</span><h4>Automação de Processos</h4><p>Substituir Excel e papel por sistemas web com relatórios, rastreabilidade e dashboards.</p></div>
+            <div class="feature reveal"><span class="icon">🔧</span><h4>Manutenção & Evolução</h4><p>Manutenção de sistemas existentes, novas funcionalidades e refatoração de código legado.</p></div>
+            <div class="feature reveal"><span class="icon">🧪</span><h4>Testes Automatizados</h4><p>Implantação de Vitest, Playwright e PHPUnit para garantir qualidade em produção.</p></div>
+        </div>
+    </div>
+</section>
+
+<div class="contact" id="contacto">
+    <div class="container reveal">
+        <div class="section-kicker">Contacto</div>
+        <h2>Vamos construir algo real?</h2>
+        <p>Disponível para projetos remotos nacionais e internacionais.</p>
+        <div class="actions">
+            <a href="mailto:los486@hotmail.com" class="btn btn-white">los486@hotmail.com</a>
+            <a href="https://www.linkedin.com/in/luiz-antonio-de-oliveira-silva-84945197" class="btn btn-outline" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://github.com/losmanim" class="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <p>&copy; 2026 Luiz Antonio · Web Developer</p>
+    <p><a href="https://github.com/losmanim" target="_blank" rel="noopener">GitHub</a> · <a href="https://www.linkedin.com/in/luiz-antonio-de-oliveira-silva-84945197" target="_blank" rel="noopener">LinkedIn</a> · <a href="mailto:los486@hotmail.com">Email</a></p>
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-label="Visualização da imagem">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Fechar">&times;</button>
+    <button class="lightbox-nav prev" id="lightboxPrev" aria-label="Anterior">&#10094;</button>
+    <img id="lightboxImg" src="" alt="">
+    <button class="lightbox-nav next" id="lightboxNext" aria-label="Próxima">&#10095;</button>
+    <div class="lightbox-counter" id="lightboxCounter"></div>
+</div>
+
+<script>
+(function(){
+    // Nav
+    var navToggle=document.getElementById('navToggle');
+    var navLinks=document.getElementById('navLinks');
+    navToggle.addEventListener('click',function(){navLinks.classList.toggle('open')});
+    navLinks.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){navLinks.classList.remove('open')})});
+
+    // Reveal
+    var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el)});
+
+    // Counters
+    var counted=false;
+    function animateCounters(){
+        if(counted) return; counted=true;
+        document.querySelectorAll('[data-count]').forEach(function(el){
+            var target=parseInt(el.getAttribute('data-count'),10);
+            var suffix=el.getAttribute('data-suffix')||'';
+            var dur=1400, start=performance.now();
+            function tick(now){
+                var p=Math.min((now-start)/dur,1);
+                var ease=1-Math.pow(1-p,3);
+                var val=Math.floor(ease*target);
+                el.textContent=val.toLocaleString('pt-PT')+suffix;
+                if(p<1) requestAnimationFrame(tick);
+                else el.textContent=target.toLocaleString('pt-PT')+suffix;
+            }
+            requestAnimationFrame(tick);
         });
-        navLinks.querySelectorAll("a").forEach(function (link) {
-            link.addEventListener("click", function () {
-                navLinks.classList.remove("open");
+    }
+    var metrics=document.querySelector('.metrics');
+    if(metrics){
+        var mObs=new IntersectionObserver(function(entries){if(entries[0].isIntersecting){animateCounters();mObs.disconnect()}},{threshold:.3});
+        mObs.observe(metrics);
+    }
+
+    // Filters
+    var filters=document.querySelectorAll('.filter');
+    var projects=document.querySelectorAll('.project');
+    filters.forEach(function(btn){
+        btn.addEventListener('click',function(){
+            filters.forEach(function(b){b.classList.remove('active')});
+            btn.classList.add('active');
+            var f=btn.getAttribute('data-filter');
+            projects.forEach(function(p){
+                var show=(f==='todos'||p.getAttribute('data-cat')===f);
+                p.style.display=show?'flex':'none';
             });
         });
+    });
 
-        var filtros = document.querySelectorAll(".filtro");
-        var cards = document.querySelectorAll(".project-card");
-        filtros.forEach(function (filtro) {
-            filtro.addEventListener("click", function () {
-                filtros.forEach(function (f) { f.classList.remove("active"); });
-                filtro.classList.add("active");
-                var cat = filtro.dataset.filtro;
-                cards.forEach(function (card) {
-                    if (cat === "todos" || card.dataset.nicho === cat) {
-                        card.style.display = "";
-                        card.classList.add("reveal");
-                    } else {
-                        card.style.display = "none";
-                    }
-                });
-            });
+    // Lightbox
+    var lb=document.getElementById('lightbox'), lbImg=document.getElementById('lightboxImg'), lbCount=document.getElementById('lightboxCounter');
+    var gal=[], idx=0;
+    function openLb(images,i){gal=images;idx=i||0;updateLb();lb.classList.add('open');document.body.style.overflow='hidden'}
+    function closeLb(){lb.classList.remove('open');document.body.style.overflow=''}
+    function updateLb(){if(!gal.length) return;lbImg.src=gal[idx];lbCount.textContent=(idx+1)+' / '+gal.length}
+    function navLb(d){if(!gal.length) return;idx=(idx+d+gal.length)%gal.length;updateLb()}
+    document.querySelectorAll('.project-media img').forEach(function(img){
+        img.style.cursor='zoom-in';
+        img.addEventListener('click',function(){
+            var card=img.closest('.project');
+            var imgs=[img.getAttribute('src')];
+            // include gallery images if card has data-gallery
+            var g=card.getAttribute('data-gallery');
+            if(g){try{imgs=JSON.parse(g)}catch(e){}}
+            openLb(imgs,0);
         });
-
-        var lightbox = document.getElementById("lightbox");
-        var lightboxImg = document.getElementById("lightboxImg");
-        var lightboxCounter = document.getElementById("lightboxCounter");
-        var galeriaAtual = [];
-        var indiceAtual = 0;
-
-        function abrirLightbox(galeria, indice) {
-            galeriaAtual = galeria;
-            indiceAtual = indice || 0;
-            atualizarImagem();
-            lightbox.classList.add("open");
-            document.body.style.overflow = "hidden";
-        }
-
-        function fecharLightbox() {
-            lightbox.classList.remove("open");
-            document.body.style.overflow = "";
-        }
-
-        function atualizarImagem() {
-            if (galeriaAtual.length === 0) return;
-            lightboxImg.src = galeriaAtual[indiceAtual];
-            lightboxCounter.textContent = (indiceAtual + 1) + " / " + galeriaAtual.length;
-        }
-
-        function navegar(direcao) {
-            if (galeriaAtual.length === 0) return;
-            indiceAtual = (indiceAtual + direcao + galeriaAtual.length) % galeriaAtual.length;
-            atualizarImagem();
-        }
-
-        document.querySelectorAll(".project-img").forEach(function (imgContainer) {
-            imgContainer.addEventListener("click", function () {
-                abrirLightbox(JSON.parse(this.dataset.galeria), 0);
-            });
-        });
-
-        document.getElementById("lightboxClose").addEventListener("click", fecharLightbox);
-        document.getElementById("lightboxPrev").addEventListener("click", function () { navegar(-1); });
-        document.getElementById("lightboxNext").addEventListener("click", function () { navegar(1); });
-        lightbox.addEventListener("click", function (e) {
-            if (e.target === lightbox) fecharLightbox();
-        });
-        document.addEventListener("keydown", function (e) {
-            if (!lightbox.classList.contains("open")) return;
-            if (e.key === "Escape") fecharLightbox();
-            if (e.key === "ArrowLeft") navegar(-1);
-            if (e.key === "ArrowRight") navegar(1);
-        });
-
-        // Reveal ao scroll
-        var observer = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry) {
-                if (entry.isIntersecting) entry.target.classList.add("visible");
-            });
-        }, { threshold: 0.1 });
-        document.querySelectorAll(".reveal").forEach(function (el) { observer.observe(el); });
-    })();
-    </script>
-
+    });
+    document.getElementById('lightboxClose').addEventListener('click',closeLb);
+    document.getElementById('lightboxPrev').addEventListener('click',function(){navLb(-1)});
+    document.getElementById('lightboxNext').addEventListener('click',function(){navLb(1)});
+    lb.addEventListener('click',function(e){if(e.target===lb) closeLb()});
+    document.addEventListener('keydown',function(e){if(!lb.classList.contains('open')) return; if(e.key==='Escape') closeLb(); if(e.key==='ArrowLeft') navLb(-1); if(e.key==='ArrowRight') navLb(1)});
+})();
+</script>
 </body>
 </html>

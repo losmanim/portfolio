@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0F766E"/><stop offset="100%" stop-color="#14B8A6"/></linearGradient></defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <text x="600" y="280" font-family="Arial,sans-serif" font-size="72" font-weight="700" fill="white" text-anchor="middle">FaturaFlow BR</text>
+  <text x="600" y="350" font-family="Arial,sans-serif" font-size="32" fill="rgba(255,255,255,0.85)" text-anchor="middle">Emissor NFS-e para MEI · Simples Nacional</text>
+  <rect x="440" y="400" width="320" height="56" rx="28" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.3)"/>
+  <text x="600" y="436" font-family="Arial,sans-serif" font-size="24" fill="white" text-anchor="middle">Next.js · Focus NFe · Supabase</text>
+</svg>

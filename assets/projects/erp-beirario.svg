@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
-  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0F766E"/><stop offset="100%" stop-color="#0A2A66"/></linearGradient></defs>
-  <rect width="1200" height="630" fill="url(#g)"/>
-  <text x="600" y="270" font-family="Arial,sans-serif" font-size="64" font-weight="700" fill="white" text-anchor="middle">ERP Micro-Restaurante</text>
-  <text x="600" y="340" font-family="Arial,sans-serif" font-size="36" fill="rgba(255,255,255,0.85)" text-anchor="middle">Beira Rio · Cardápio · Estoque · Comanda</text>
-  <rect x="420" y="400" width="360" height="56" rx="28" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.3)"/>
-  <text x="600" y="436" font-family="Arial,sans-serif" font-size="24" fill="white" text-anchor="middle">Next.js 16 · Prisma · Supabase</text>
-</svg>
